@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>維京任務攻略 | 大佬群CSL</title>
+  <meta name="description" content="Coin Master 維京任務攻略：每一關的下注方式、目標金幣與獎勵。大佬群CSL製作。">
+  <meta name="theme-color" content="#17112B">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 圖示 sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-spins" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 6.5 9.5 12.5h3l-1 5 3.5-6h-3z" fill="currentColor"/></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+    <symbol id="i-petxp" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="6" cy="10" rx="2" ry="2.6"/><ellipse cx="10" cy="6" rx="2" ry="2.6"/><ellipse cx="14.5" cy="6" rx="2" ry="2.6"/><ellipse cx="18.4" cy="10" rx="2" ry="2.6"/><path d="M12.2 11c3 0 6 4.4 6 6.6 0 2-1.7 2.6-3 2.2-1.2-.4-2-.9-3-.9s-1.8.5-3 .9c-1.3.4-3-.2-3-2.2 0-2.2 3-6.6 6-6.6z"/></g></symbol>
+    <symbol id="i-chest" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3.5 10.5h17V19a1 1 0 0 1-1 1h-15a1 1 0 0 1-1-1z"/><path d="M3.5 10.5a5 5 0 0 1 5-5h7a5 5 0 0 1 5 5"/><rect x="10" y="9" width="4" height="5" rx="1"/></g></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M12 8.2l1.2 2.5 2.7.4-2 1.9.5 2.7-2.4-1.3-2.4 1.3.5-2.7-2-1.9 2.7-.4z" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-hammer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6 6 14l4 4 8-8"/><path d="M12 4l8 8"/><path d="M8 16l-4.5 4.5"/></g></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2 4.5 13.5H11L9.5 22 19.5 9.5H13z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wheel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></g><circle cx="12" cy="12" r="2.2" fill="currentColor"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></g></symbol>
+    <symbol id="bottle" viewBox="0 0 40 50">
+      <path d="M14.5 3.5h11v11.2c6.8 2.7 11.5 9.2 11.5 16.6C37 41 29.4 47.5 20 47.5S3 41 3 31.3c0-7.4 4.7-13.9 11.5-16.6z" fill="rgba(255,255,255,.16)" stroke="rgba(255,255,255,.55)" stroke-width="1.6"/>
+      <path d="M5.3 30c4.2-3.2 9.4 2.6 14.7-.2s10.2-3.3 14.7.1c.4 8.5-6.3 15.1-14.7 15.1S4.9 38.6 5.3 30z" fill="currentColor"/>
+      <rect x="13" y="1" width="14" height="5.5" rx="2" fill="#B98B57"/>
+      <ellipse cx="12.5" cy="27" rx="2.2" ry="4.5" fill="rgba(255,255,255,.45)" transform="rotate(25 12.5 27)"/>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#detail" data-i18n="skip">跳到關卡詳情</a>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#">
+        <img class="brand-mark" src="favicon.svg" alt="" width="34" height="34">
+        <span class="brand-text" data-i18n="siteTitle">維京任務攻略</span>
+      </a>
+      <label class="lang">
+        <svg aria-hidden="true"><use href="#i-globe"/></svg>
+        <span class="sr-only" data-i18n="language">語言</span>
+        <select id="lang-select"></select>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="quest-title">
+      <div class="hero-copy">
+        <nav class="quest-tabs" id="quest-tabs"></nav>
+        <div class="title-block">
+          <h1 id="quest-title" class="quest-title">Enchanted Viking Quest</h1>
+          <p class="seal" aria-label="大佬群CSL製作"><span aria-hidden="true">大佬群</span><strong aria-hidden="true">CSL</strong><span aria-hidden="true">製作</span></p>
+        </div>
+        <p class="quest-local" id="quest-local"></p>
+        <p class="tagline" data-i18n="tagline"></p>
+
+        <fieldset class="tiers">
+          <legend data-i18n="tier">選擇主獎</legend>
+          <div class="tier-list" id="tier-list"></div>
+        </fieldset>
+        <p class="tier-note" id="tier-note"></p>
+      </div>
+
+      <div class="book">
+        <div class="book-head">
+          <h2 data-i18n="pathTitle">關卡地圖</h2>
+        </div>
+        <div class="path" id="path">
+          <svg class="path-line" viewBox="0 0 500 310" preserveAspectRatio="none" aria-hidden="true">
+            <path id="path-d" d="M50 245 C 95 245, 95 225, 140 225 S 185 245, 230 245 S 275 225, 320 225 S 365 245, 410 245 C 490 245, 490 80, 410 80 C 365 80, 365 60, 320 60 S 275 80, 230 80 S 185 60, 140 60 S 95 80, 50 80"/>
+          </svg>
+        </div>
+        <p class="path-hint" data-i18n="pathHint"></p>
+      </div>
+    </section>
+
+    <section class="detail-zone wrap" id="detail" tabindex="-1"></section>
+
+    <section class="rules wrap" aria-labelledby="rules-title">
+      <h2 id="rules-title" data-i18n="rulesTitle"></h2>
+      <ol class="rule-list">
+        <li data-i18n="rule1"></li>
+        <li data-i18n="rule2"></li>
+      </ol>
+    </section>
+
+    <section class="overview wrap" aria-labelledby="table-title">
+      <div class="overview-head">
+        <h2 id="table-title" data-i18n="tableTitle"></h2>
+        <p class="total" id="total"></p>
+      </div>
+      <div class="table-scroll" id="table-wrap"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer-credit">© <span id="year"></span> 大佬群CSL製作</p>
+      <p class="footer-small" data-i18n="source"></p>
+      <p class="footer-small" data-i18n="disclaimer"></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/quests.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
