@@ -163,9 +163,11 @@ button { cursor: pointer; }
   background: var(--wax); color: var(--gold-soft); font-size: 11px; font-weight: 700;
   padding: 2px 8px; border-radius: 999px; white-space: nowrap;
 }
-.tier-epic .tier-name { color: #E3B8FF; }
-.tier-huge .tier-name { color: #9FE6A8; }
-.tier-medium .tier-name { color: #8FD8F7; }
+.tier-k-epic .tier-name { color: #E3B8FF; }
+.tier-k-huge .tier-name, .tier-k-tierSpins .tier-name { color: #9FE6A8; }
+.tier-k-medium .tier-name, .tier-k-tierCards .tier-name { color: #8FD8F7; }
+.tier-k-tierToken .tier-name { color: #F3D79A; }
+.no-goal { font-size: 13px; color: var(--muted); }
 .tier-note { margin-top: 14px; font-size: 14px; color: var(--gold-soft); }
 
 /* ---------- Potion book (path) ---------- */
@@ -285,13 +287,13 @@ button { cursor: pointer; }
 .pips { display: inline-flex; gap: 3px; width: 26px; flex: none; }
 .pips i { width: 6px; height: 14px; border-radius: 2px; background: #8A5A12; }
 @media (min-width: 600px) {
-  .col-strategy > .ladder { grid-auto-flow: column; grid-auto-columns: 1fr; gap: 16px; }
-  .col-strategy > .ladder > .rung + .rung::before {
+  .col-strategy > .ladder:not(.ladder-long) { grid-auto-flow: column; grid-auto-columns: 1fr; gap: 16px; }
+  .col-strategy > .ladder:not(.ladder-long) > .rung + .rung::before {
     content: ''; position: absolute; left: -13px; top: 50%; width: 9px; height: 9px;
     border-top: 2px solid var(--ink-soft); border-right: 2px solid var(--ink-soft);
     transform: translateY(-50%) rotate(45deg);
   }
-  .col-strategy > .ladder > .rung + .rung .raise { position: static; background: none; padding: 0; margin: -4px 0 4px; white-space: normal; }
+  .col-strategy > .ladder:not(.ladder-long) > .rung + .rung .raise { position: static; background: none; padding: 0; margin: -4px 0 4px; white-space: normal; }
 }
 .rule-notes { margin: 16px 0 0; padding-left: 20px; display: grid; gap: 6px; color: var(--ink-soft); }
 .note-cap { color: #7A2131; font-weight: 650; }

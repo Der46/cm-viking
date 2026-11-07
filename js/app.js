@@ -10,7 +10,8 @@
     spins: 'spins', coins: 'coins', petxp: 'petxp', setBlast: 'bolt', coinCraze: 'bolt',
     magicalChest: 'chest', smallSeasonal: 'chest', bigSeasonal: 'chest', seasonalChest: 'chest',
     diamondSeasonal: 'chest', regularChest: 'chest', blueChest: 'chest', jokerChest: 'chest',
-    joker: 'card', goldCard: 'card', diamondCard: 'card', goldenHammers: 'hammer', pinata: 'star'
+    joker: 'card', goldCard: 'card', diamondCard: 'card', goldenHammers: 'hammer', pinata: 'star',
+    tokens: 'token', tokenBox: 'chest', gems: 'gem', redHammers: 'hammer'
   };
 
   var store = {
@@ -51,6 +52,7 @@
   function tier() {
     var q = quest();
     return q.tiers.filter(function (x) { return x.id === state.tier; })[0] ||
+      q.tiers.filter(function (x) { return x.default; })[0] ||
       q.tiers.filter(function (x) { return x.popular; })[0] || q.tiers[q.tiers.length - 1];
   }
 
@@ -71,16 +73,22 @@
     var s = t('i_' + it.t, { v: it.v });
     if (it.p) s += ' ' + it.p;
     if (it.m) s += ' ' + t('minutes', { m: it.m });
+    if (it.about) {
+      var cjk = /^(zh|ja)/.test(state.lang);
+      s += (cjk ? '（' : ' (') + t('aboutSpins', { v: it.about }) + (cjk ? '）' : ')');
+    }
     return s;
   }
   function goalText(b) { return t(b.wheel ? 'goalWheel' : 'goalCoins', { v: b.goal }); }
 
   function ruleHTML(r) {
-    if (r.kind === 'max') return '<p class="rule-line">' + esc(t('maxBet')) + '</p>';
-    if (r.kind === 'auto') return '<p class="rule-line">' + esc(t('autoLowest')) + '</p>';
+    if (r.kind === 'max') return '<p class="rule-line">' + esc(t(r.auto ? 'maxAuto' : 'maxBet')) + '</p>';
+    if (r.kind === 'auto') {
+      return '<p class="rule-line">' + esc(r.bet && r.bet > 1 ? t('autoBetN', { b: t('bet' + r.bet) }) : t('autoLowest')) + '</p>';
+    }
     if (r.kind === 'free') return '<p class="rule-line">' + esc(t('freeSwitch')) + '</p>';
     if (r.kind === 'ladder') {
-      var h = '<ol class="ladder">';
+      var h = '<ol class="ladder' + (r.steps.length > 3 ? ' ladder-long' : '') + '">';
       r.steps.forEach(function (s, i) {
         h += '<li class="rung' + (s[1] ? '' : ' rung-open') + '">';
         if (i > 0) h += '<span class="raise">' + esc(t('ifNoBonus')) + '</span>';
@@ -90,6 +98,7 @@
       });
       h += '</ol><ul class="rule-notes">';
       if (r.cap) h += '<li class="note-cap">' + esc(t('capNote')) + '</li>';
+      if (r.more) h += '<li>' + esc(t('moreNote', { n: r.steps[0][1] })) + '</li>';
       if (r.loop) h += '<li>' + esc(t('loopNote')) + '</li>';
       h += '<li>' + esc(t('restartNote')) + '</li></ul>';
       return h;
@@ -141,7 +150,7 @@
     var cur = tier();
     $('tier-list').innerHTML = q.tiers.map(function (x) {
       var on = x.id === cur.id;
-      return '<label class="tier tier-' + x.label + (on ? ' is-on' : '') + '">' +
+      return '<label class="tier tier-k-' + x.label + (on ? ' is-on' : '') + '">' +
         '<input type="radio" name="tier" value="' + x.id + '"' + (on ? ' checked' : '') + '>' +
         (x.popular ? '<span class="tier-pop">' + esc(t('mostPopular')) + '</span>' : '') +
         '<span class="tier-prize">' + icon('spins') + x.prize + '</span>' +
@@ -187,7 +196,7 @@
       '<header class="page-head">' +
       '<div class="numeral" aria-hidden="true"><span>' + n + '</span></div>' +
       '<div class="page-title"><h2>' + esc(t('bar', { n: n })) + '</h2>';
-    if (bar) {
+    if (bar && bar.goal) {
       h += '<p class="goal">' + icon(bar.wheel ? 'wheel' : 'coins') +
         '<span><span class="sr-only">' + esc(t('goal')) + ': </span>' + esc(goalText(bar)) + '</span></p>';
     }
@@ -218,19 +227,19 @@
       $('total').textContent = '';
       return;
     }
-    var sum = 0;
+    var sum = 0, allGoals = true;
     var rows = cur.bars.map(function (b, i) {
-      sum += parseAmount(b.goal);
+      if (b.goal) sum += parseAmount(b.goal); else allGoals = false;
       var n = i + 1;
       return '<tr class="' + (n === state.bar ? 'is-on' : '') + '" style="--potion:' + q.colors[i] + '">' +
         '<th scope="row"><button type="button" class="row-btn" data-bar="' + n + '"><i class="dot"></i>' + esc(t('bar', { n: n })) + '</button></th>' +
-        '<td class="td-goal"><strong>' + esc(b.goal) + '</strong>' +
+        '<td class="td-goal">' + (b.goal ? '<strong>' + esc(b.goal) + '</strong>' : '<span class="no-goal">' + esc(t('noGoal')) + '</span>') +
         (b.wheel ? '<span class="wheel-tag">' + icon('wheel') + esc(t('wheelTag')) + '</span>' : '') + '</td>' +
         '<td class="td-loot">' + b.rewards.map(function (it) { return '<span>' + esc(itemText(it)) + '</span>'; }).join('') + '</td></tr>';
     }).join('');
     wrap.innerHTML = '<table><thead><tr><th scope="col">' + esc(t('colBar')) + '</th><th scope="col">' + esc(t('colGoal')) +
       '</th><th scope="col">' + esc(t('colRewards')) + '</th></tr></thead><tbody>' + rows + '</tbody></table>';
-    $('total').innerHTML = esc(t('total')) + ' <strong>' + fmtAmount(sum) + '</strong>';
+    $('total').innerHTML = allGoals ? esc(t('total')) + ' <strong>' + fmtAmount(sum) + '</strong>' : '';
   }
 
   function render() {

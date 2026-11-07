@@ -5,20 +5,25 @@
  *
  * sequence.bars[n] 下注規則（文字會依語言自動產生，不用自己翻譯）：
  *   { kind: 'max' }                         使用最高下注
+ *   { kind: 'max', auto: true }             最高注開自動轉
  *   { kind: 'auto' }                        最低注自動轉
+ *   { kind: 'auto', bet: 4 }                第四檔注自動轉（bet 1~4）
  *   { kind: 'free' }                        只用前兩檔注自由切換
- *   { kind: 'ladder', steps: [[檔位, 次數], ...], cap: true, loop: true }
- *        檔位 1=最低注 2=第二檔 3=第三檔；次數 0 = 轉到出獎勵為止
- *        cap  = 顯示「不再往上加注」；loop = 顯示「輪流轉到出獎勵」
+ *   { kind: 'ladder', steps: [[檔位, 次數], ...], cap: true, loop: true, more: true }
+ *        檔位 1~4（1=最低注）；次數 0 = 轉到出獎勵為止
+ *        cap  = 顯示「不再往上加注」；loop = 顯示「依序輪流轉到出獎勵」
+ *        more = 顯示「還沒出就每 N 次再加一檔」（N 取第一步的次數）
  *   { kind: 'choice', options: [{ when: 'lowCoins' | 'highCoins', rule: {...} }] }
  *
+ * tiers[] 主獎：id、prize（顯示用）、label（tierCards / medium …）、cards（金卡數）、
+ *          popular（最熱門標籤）、default（預設選這個）、note（說明文字 key）
  * tiers[].bars[i] 每一關：
- *   goal:  目標金幣（字串，保留 K/B/T）
+ *   goal:  目標金幣（字串，保留 K/B/T；圖源沒有就省略）
  *   wheel: true = 目標要在獎勵轉盤贏得
- *   rewards: [{ t: 類型, v: 數量, m: 分鐘, p: 百分比 }]
+ *   rewards: [{ t: 類型, v: 數量, m: 分鐘, p: 百分比, about: 約略旋轉數 }]
  *   類型：spins coins petxp setBlast magicalChest smallSeasonal bigSeasonal seasonalChest
  *         diamondSeasonal regularChest blueChest jokerChest joker pinata goldCard
- *         diamondCard goldenHammers coinCraze
+ *         diamondCard goldenHammers coinCraze tokens tokenBox gems redHammers
  * 沒有資料的主獎，bars 設為 null。
  */
 window.VIKING_QUESTS = [
@@ -84,11 +89,96 @@ window.VIKING_QUESTS = [
           { goal: '4.13T', rewards: [{ t: 'spins', v: '4.2K' }, { t: 'coins', v: '90B' }, { t: 'petxp', v: '560K' }, { t: 'pinata' }] },
           { goal: '745B', wheel: true, rewards: [{ t: 'coins', v: '50B' }, { t: 'petxp', v: '330K' }, { t: 'smallSeasonal' }] },
           { goal: '4.55T', rewards: [{ t: 'spins', v: '5K' }, { t: 'pinata' }, { t: 'coins', v: '85B' }] },
-          { goal: '12.39T', rewards: [{ t: 'spins', v: '11.5K' }, { t: 'blueChest', v: '2.5K' }, { t: 'petxp', v: '880K' }] },
+          { goal: '12.39T', rewards: [{ t: 'spins', v: '11.5K' }, { t: 'blueChest', about: '2.5K' }, { t: 'petxp', v: '880K' }] },
           { goal: '3.36T', wheel: true, rewards: [{ t: 'goldCard' }, { t: 'coins', v: '280B' }, { t: 'petxp', v: '550K' }] },
           { goal: '14.54T', rewards: [{ t: 'spins', v: '20K' }, { t: 'bigSeasonal' }, { t: 'goldenHammers', m: 10 }] },
           { goal: '8.6T', wheel: true, rewards: [{ t: 'goldCard' }, { t: 'spins', v: '5.5K' }, { t: 'coinCraze', p: '200%' }, { t: 'petxp', v: '1.8M' }] },
           { goal: '29.56T', rewards: [{ t: 'spins', v: '65K' }, { t: 'diamondCard' }, { t: 'diamondSeasonal' }, { t: 'jokerChest' }, { t: 'joker' }] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'viking',
+    title: 'Viking Quest',
+    name: {
+      'zh-TW': '維京任務',
+      en: 'Viking Quest',
+      ja: 'バイキングクエスト',
+      ko: '바이킹 퀘스트',
+      th: 'ภารกิจไวกิ้ง',
+      vi: 'Nhiệm vụ Viking',
+      id: 'Quest Viking',
+      es: 'Misión vikinga',
+      pt: 'Missão viking'
+    },
+    colors: ['#F4C95D', '#E8A04F', '#6FD3A0', '#4FC1D9', '#5AAEF2',
+             '#7F9BF5', '#B58CF2', '#EE84B8', '#F2725F', '#E9C46A'],
+    sequence: {
+      bars: {
+        1: { kind: 'max', auto: true },
+        2: { kind: 'max', auto: true },
+        3: { kind: 'max', auto: true },
+        4: { kind: 'max', auto: true },
+        5: { kind: 'ladder', steps: [[1, 15], [2, 15], [3, 15]], more: true },
+        6: { kind: 'ladder', steps: [[1, 20], [2, 20], [3, 20], [4, 0]], cap: true },
+        7: { kind: 'auto', bet: 4 },
+        8: {
+          kind: 'choice',
+          options: [
+            { when: 'lowCoins', rule: { kind: 'free' } },
+            { when: 'highCoins', rule: { kind: 'ladder', steps: [[1, 20], [2, 20], [3, 20]], loop: true } }
+          ]
+        },
+        9: { kind: 'ladder', steps: [[1, 20], [2, 20], [3, 20], [4, 20]], loop: true },
+        10: { kind: 'ladder', steps: [[1, 25], [2, 25], [3, 25]], loop: true }
+      }
+    },
+    tiers: [
+      {
+        id: '40k', prize: '40K', label: 'tierCards', cards: 2, note: 'noteVk40',
+        // 圖源只有獎勵（金幣以 M 計，依村莊等級不同），沒有目標金幣
+        bars: [
+          { rewards: [{ t: 'spins', v: '2K' }, { t: 'coins', v: '55M' }, { t: 'petxp', v: '280K' }, { t: 'setBlast', p: '30%' }] },
+          { rewards: [{ t: 'coins', v: '15M' }, { t: 'petxp', v: '225K' }, { t: 'magicalChest' }] },
+          { rewards: [{ t: 'spins', v: '2K' }, { t: 'coins', v: '65M' }, { t: 'petxp', v: '425K' }, { t: 'blueChest' }] },
+          { rewards: [{ t: 'coins', v: '35M' }, { t: 'petxp', v: '275K' }, { t: 'smallSeasonal' }] },
+          { rewards: [{ t: 'spins', v: '4.6K' }, { t: 'pinata' }, { t: 'coins', v: '85M' }] },
+          { rewards: [{ t: 'spins', v: '3.5K' }, { t: 'pinata' }, { t: 'petxp', v: '800K' }, { t: 'jokerChest' }] },
+          { rewards: [{ t: 'coins', v: '200M' }, { t: 'petxp', v: '500K' }, { t: 'goldCard' }] },
+          { rewards: [{ t: 'spins', v: '18.5K' }, { t: 'bigSeasonal' }, { t: 'goldenHammers' }] },
+          { rewards: [{ t: 'spins', v: '5K' }, { t: 'coinCraze', p: '200%' }, { t: 'goldCard' }, { t: 'petxp', v: '1.7M' }] },
+          { rewards: [{ t: 'spins', v: '40K' }, { t: 'joker' }, { t: 'diamondCard' }, { t: 'goldCard' }, { t: 'regularChest', about: '5K–99K' }] }
+        ]
+      },
+      {
+        id: '60k', prize: '60K', label: 'tierSpins', cards: 1, note: 'noteVk60', default: true,
+        bars: [
+          { goal: '2.12T', rewards: [{ t: 'spins', v: '2K' }, { t: 'coins', v: '55B' }, { t: 'petxp', v: '280K' }, { t: 'setBlast', m: 30, p: '30%' }] },
+          { goal: '740B', rewards: [{ t: 'coins', v: '15B' }, { t: 'petxp', v: '225K' }, { t: 'magicalChest' }] },
+          { goal: '3.82T', rewards: [{ t: 'spins', v: '2K' }, { t: 'coins', v: '65B' }, { t: 'petxp', v: '425K' }, { t: 'blueChest', about: '2.5K' }] },
+          { goal: '725B', wheel: true, rewards: [{ t: 'coins', v: '35B' }, { t: 'petxp', v: '275K' }, { t: 'smallSeasonal' }] },
+          { goal: '4.2T', rewards: [{ t: 'spins', v: '4.6K' }, { t: 'pinata' }, { t: 'coins', v: '85B' }] },
+          { goal: '5.61T', wheel: true, rewards: [{ t: 'spins', v: '11.5K' }, { t: 'pinata' }, { t: 'petxp', v: '800K' }] },
+          { goal: '8.5T', rewards: [{ t: 'coins', v: '200B' }, { t: 'petxp', v: '500K' }] },
+          { goal: '15.48T', rewards: [{ t: 'spins', v: '18.5K' }, { t: 'bigSeasonal' }, { t: 'goldenHammers' }] },
+          { goal: '8.78T', wheel: true, rewards: [{ t: 'goldCard' }, { t: 'spins', v: '5K' }, { t: 'petxp', v: '1.7M' }, { t: 'coinCraze', p: '200%' }] },
+          { goal: '32.53T', rewards: [{ t: 'spins', v: '60K' }, { t: 'regularChest' }] }
+        ]
+      },
+      {
+        id: '20k', prize: '20K', label: 'tierToken', cards: 1, note: 'noteVk20',
+        bars: [
+          { goal: '2.12T', rewards: [{ t: 'spins', v: '2K' }, { t: 'coins', v: '55B' }, { t: 'petxp', v: '280K' }, { t: 'setBlast', m: 30, p: '30%' }] },
+          { goal: '740B', rewards: [{ t: 'coins', v: '15B' }, { t: 'petxp', v: '225K' }, { t: 'magicalChest' }] },
+          { goal: '3.82T', rewards: [{ t: 'spins', v: '2K' }, { t: 'coins', v: '65B' }, { t: 'petxp', v: '425K' }, { t: 'blueChest', about: '2.5K' }] },
+          { goal: '725B', wheel: true, rewards: [{ t: 'coins', v: '35B' }, { t: 'petxp', v: '275K' }, { t: 'smallSeasonal' }] },
+          { goal: '4.2T', rewards: [{ t: 'spins', v: '4.6K' }, { t: 'coins', v: '85B' }, { t: 'pinata' }] },
+          { goal: '7.85T', wheel: true, rewards: [{ t: 'tokens', v: '2' }, { t: 'pinata' }, { t: 'petxp', v: '800K' }] },
+          { goal: '13.6T', rewards: [{ t: 'coins', v: '200B' }, { t: 'petxp', v: '500K' }] },
+          { goal: '25.68T', rewards: [{ t: 'spins', v: '18.5K' }, { t: 'bigSeasonal' }, { t: 'goldenHammers' }] },
+          { goal: '13.26T', wheel: true, rewards: [{ t: 'goldCard' }, { t: 'spins', v: '5K' }, { t: 'petxp', v: '1.7M' }, { t: 'coinCraze', p: '200%' }] },
+          { goal: '52.92T', rewards: [{ t: 'spins', v: '20K' }, { t: 'tokens', v: '3' }, { t: 'tokenBox' }, { t: 'gems', v: '1K' }, { t: 'redHammers' }] }
         ]
       }
     ]
