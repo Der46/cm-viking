@@ -2,7 +2,7 @@
  * 維京任務資料 / Viking quest data
  * ------------------------------------------------------------------
  * 新增其他維京任務：在 VIKING_QUESTS 陣列裡再加一個物件即可，頁面會自動出現切換按鈕。
- * 選填：theme: 'event'（淡黃）/ 'tribal'（淡綠）；node: 'gift' 禮物盒 / 'crate' 叢林箱（預設 'bottle' 藥水瓶）
+ * 選填：theme: 'enchanted'（淺紫）/ 'event'（淡黃）/ 'tribal'（淡綠），不填為深紫；node: 'gift' 禮物盒 / 'crate' 叢林箱（預設 'bottle' 藥水瓶）
  * 兩種下注順序：每關用 { kind: 'choice', options: [{ when: 'seqMore', rule }, { when: 'seqLess', rule }] }
  *
  * sequence.bars[n] 下注規則（文字會依語言自動產生，不用自己翻譯）：
@@ -32,6 +32,7 @@ window.VIKING_QUESTS = [
   {
     id: 'enchanted',
     title: 'Enchanted Viking Quest',
+    theme: 'enchanted', // 淺紫色主題
     name: {
       'zh-TW': '魔法維京任務',
       en: 'Enchanted Viking Quest',
