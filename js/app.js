@@ -142,7 +142,7 @@
 
   function renderHero() {
     var q = quest();
-    var light = { event: '#FFF6D9', tribal: '#EEF6E2' };
+    var light = { event: '#E6C478', tribal: '#B4D293' };
     document.body.setAttribute('data-theme', q.theme || 'default');
     document.body.classList.toggle('tone-light', !!light[q.theme]);
     var meta = document.querySelector('meta[name="theme-color"]');

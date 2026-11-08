@@ -385,22 +385,22 @@ tbody th, tbody td { padding: 10px 16px; vertical-align: top; text-align: left; 
    各主題只換色票，共用的版面覆寫寫在 .tone-light 底下
    ========================================================= */
 body[data-theme="event"] {
-  --night: #FFF6D9; --plum: #FFFDF4; --plum-2: #FFF1C7;
-  --line: rgba(176, 116, 18, .32); --gold: #B7791F; --gold-soft: #8A5300;
-  --parchment: #FFFFFF; --text: #3B2A10; --muted: #6B5530;
-  --edge: rgba(176, 116, 18, .22); --tint: rgba(176, 116, 18, .08); --shade: rgba(120, 80, 0, .4);
-  --chip: #FFF1C7; --chip-text: #4A3512; --tier-on: #FFE7A3; --row-on: rgba(255, 196, 70, .25);
-  --title: #5A3608; --title-shadow: #F2C76B; --glow: rgba(255, 196, 70, .38); --glow-2: rgba(255, 160, 110, .18);
-  --bar-bg: rgba(255, 246, 217, .9);
+  --night: #E6C478; --plum: #F3DDA4; --plum-2: #E3C06C;
+  --line: rgba(110, 70, 0, .35); --gold: #9A6410; --gold-soft: #5E3A00;
+  --parchment: #FFF6DF; --text: #2E2009; --muted: #4F3B18;
+  --edge: rgba(110, 70, 0, .26); --tint: rgba(110, 70, 0, .1); --shade: rgba(80, 50, 0, .45);
+  --chip: #F1D894; --chip-text: #3A2808; --tier-on: #EDBE55; --row-on: rgba(170, 110, 10, .2);
+  --title: #432804; --title-shadow: #F5D88E; --glow: rgba(255, 175, 50, .35); --glow-2: rgba(200, 110, 50, .22);
+  --bar-bg: rgba(230, 196, 120, .93);
 }
 body[data-theme="tribal"] {
-  --night: #EEF6E2; --plum: #FBFEF6; --plum-2: #E1F0CD;
-  --line: rgba(70, 120, 40, .32); --gold: #4F8A2B; --gold-soft: #2F5E15;
-  --parchment: #FFFFFF; --text: #233219; --muted: #4D6140;
-  --edge: rgba(70, 120, 40, .22); --tint: rgba(70, 120, 40, .08); --shade: rgba(40, 80, 20, .35);
-  --chip: #E1F0CD; --chip-text: #2B4019; --tier-on: #D3EBB4; --row-on: rgba(140, 200, 90, .25);
-  --title: #2F5216; --title-shadow: #BFE09A; --glow: rgba(170, 220, 110, .42); --glow-2: rgba(240, 210, 120, .2);
-  --bar-bg: rgba(238, 246, 226, .9);
+  --night: #B4D293; --plum: #D2E6BB; --plum-2: #ACCB88;
+  --line: rgba(30, 70, 15, .35); --gold: #3A6E1C; --gold-soft: #1F420B;
+  --parchment: #F5FAEE; --text: #1A2810; --muted: #34482A;
+  --edge: rgba(30, 70, 15, .26); --tint: rgba(30, 70, 15, .1); --shade: rgba(20, 50, 10, .4);
+  --chip: #CBE2B0; --chip-text: #1F3311; --tier-on: #93C266; --row-on: rgba(60, 120, 30, .2);
+  --title: #1D3A0B; --title-shadow: #DCEEC5; --glow: rgba(225, 240, 150, .35); --glow-2: rgba(60, 120, 50, .25);
+  --bar-bg: rgba(180, 210, 147, .93);
 }
 body.tone-light {
   background-image:
@@ -409,16 +409,16 @@ body.tone-light {
 }
 body[data-theme] { transition: background-color .3s, color .3s; }
 .tone-light .topbar { background: var(--bar-bg); border-bottom-color: var(--edge); }
-.tone-light .lang { background: #fff; }
-.tone-light .lang option { background: #fff; color: var(--text); }
+.tone-light .lang { background: var(--plum); }
+.tone-light .lang option { background: var(--plum); color: var(--text); }
 .tone-light .quest-title { color: var(--title); text-shadow: 0 2px 0 var(--title-shadow), 0 0 30px var(--glow); }
-.tone-light .tier { background: #fff; border-color: var(--edge); }
+.tone-light .tier { background: var(--plum); border-color: var(--edge); }
 .tone-light .tier.is-on { background: var(--tier-on); border-color: var(--gold); }
 .tone-light .tier-prize { color: var(--text); }
-.tone-light .tier-prize .ic { color: #1C7FAE; }
-.tone-light .tier-k-tierCards .tier-name { color: #1F6A93; }
-.tone-light .tier-k-tierSpins .tier-name { color: #2E7533; }
-.tone-light .tier-k-tierToken .tier-name { color: #8F5200; }
+.tone-light .tier-prize .ic { color: #155F86; }
+.tone-light .tier-k-tierCards .tier-name { color: #13557A; }
+.tone-light .tier-k-tierSpins .tier-name { color: #215C26; }
+.tone-light .tier-k-tierToken .tier-name { color: #6E3F00; }
 .tone-light .tier-k-grandPrize .tier-name { color: var(--gold-soft); }
 .tone-light .book {
   background: radial-gradient(120% 90% at 50% 0%, var(--glow), transparent 60%), linear-gradient(180deg, var(--plum), var(--plum-2));
@@ -437,3 +437,5 @@ body[data-theme] { transition: background-color .3s, color .3s; }
 .tone-light tbody tr.is-on { background: var(--row-on); }
 .tone-light .td-loot span { background: var(--chip); color: var(--chip-text); }
 .tone-light .footer { background: var(--tint); border-top-color: var(--edge); }
+.tone-light .quest-tab[aria-pressed="true"] { color: #fff; }
+.tone-light .node.is-on .node-num { color: #fff; }
