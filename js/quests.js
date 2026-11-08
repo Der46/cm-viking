@@ -191,19 +191,19 @@ window.VIKING_QUESTS = [
   },
   {
     id: 'tribal',
-    title: 'Tribal Viking Quest',
-    theme: 'tribal',  // 淡綠色主題（每週三）
+    title: 'Wednesday Viking Quest',
+    theme: 'tribal',  // 淡綠色主題（週三維京）
     node: 'crate',    // 關卡地圖用叢林箱
     name: {
-      'zh-TW': '部落維京（週三維京）',
-      en: 'Tribal Viking Quest (Wednesday)',
-      ja: 'トライバル・バイキング（水曜）',
-      ko: '부족 바이킹 퀘스트 (수요일)',
-      th: 'ภารกิจไวกิ้งชนเผ่า (วันพุธ)',
-      vi: 'Nhiệm vụ Viking Bộ lạc (thứ Tư)',
-      id: 'Quest Viking Suku (Rabu)',
-      es: 'Misión vikinga tribal (miércoles)',
-      pt: 'Missão viking tribal (quarta-feira)'
+      'zh-TW': '週三維京',
+      en: 'Wednesday Viking Quest',
+      ja: '水曜バイキング',
+      ko: '수요일 바이킹 퀘스트',
+      th: 'ภารกิจไวกิ้งวันพุธ',
+      vi: 'Nhiệm vụ Viking thứ Tư',
+      id: 'Quest Viking Rabu',
+      es: 'Misión vikinga del miércoles',
+      pt: 'Missão viking de quarta-feira'
     },
     colors: ['#7FB24A', '#9CCB5B', '#5FAE6E', '#C99B4A', '#4E79C9',
              '#45B8B8', '#A9A196', '#D3B84E', '#E07A3F', '#3FA37A'],

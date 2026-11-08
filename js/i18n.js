@@ -59,7 +59,7 @@ window.I18N = {
     seqLess: '順序 2：金幣較少',
     i_newCard: '新卡片',
     pathHintCrate: '點選叢林箱查看該關',
-    noteTribal: '每週三的部落維京，第 50 村起開放。依金幣存量有兩種下注順序。',
+    noteTribal: '週三維京，第 50 村起開放。依金幣存量有兩種下注順序。',
     bet6: '第六檔注',
     rangeBets: '{a}到{b}之間輪流轉，直到出獎勵。',
     noteSunday: '週日維京。目前只有 60K 主獎有資料，依金幣存量有兩種下注順序。'
@@ -114,7 +114,7 @@ window.I18N = {
     seqLess: 'Sequence 2: fewer coins',
     i_newCard: 'New card',
     pathHintCrate: 'Tap a jungle crate to open that bar.',
-    noteTribal: 'The Wednesday Tribal Viking, open from village 50. Two betting sequences depending on your coins.',
+    noteTribal: 'The Wednesday Viking, open from village 50. Two betting sequences depending on your coins.',
     bet6: '6th bet',
     rangeBets: 'Rotate between {a} and {b} until the bonus lands.',
     noteSunday: 'The Sunday Viking. Only the 60K prize has data so far; two betting sequences depending on your coins.'
@@ -169,7 +169,7 @@ window.I18N = {
     seqLess: '手順 2：コインが少ない時',
     i_newCard: '新カード',
     pathHintCrate: 'ジャングルの箱をタップしてバーを表示',
-    noteTribal: '毎週水曜のトライバル・バイキング。村 50 から参加可。コイン量に応じて 2 つの手順があります。',
+    noteTribal: '水曜のバイキング。村 50 から参加可。コイン量に応じて 2 つの手順があります。',
     bet6: '6段目のベット',
     rangeBets: '{a}から{b}の間で回し、ボーナスが出るまで続ける。',
     noteSunday: '日曜のバイキング。現在データがあるのは 60K のみ。コイン量に応じて 2 つの手順があります。'
@@ -224,7 +224,7 @@ window.I18N = {
     seqLess: '순서 2: 코인이 적을 때',
     i_newCard: '새 카드',
     pathHintCrate: '정글 상자를 눌러 해당 바를 확인하세요.',
-    noteTribal: '매주 수요일 부족 바이킹, 50번 마을부터 참여 가능. 코인 양에 따라 두 가지 베팅 순서가 있습니다.',
+    noteTribal: '수요일 바이킹, 50번 마을부터 참여 가능. 코인 양에 따라 두 가지 베팅 순서가 있습니다.',
     bet6: '여섯 번째 베팅',
     rangeBets: '{a}부터 {b}까지 번갈아 돌리며 보너스가 나올 때까지 진행.',
     noteSunday: '일요일 바이킹. 현재 60K 보상만 정보가 있으며, 코인 양에 따라 두 가지 베팅 순서가 있습니다.'
@@ -279,7 +279,7 @@ window.I18N = {
     seqLess: 'ลำดับที่ 2: เหรียญน้อย',
     i_newCard: 'การ์ดใหม่',
     pathHintCrate: 'แตะกล่องป่าเพื่อเปิดบาร์นั้น',
-    noteTribal: 'ไวกิ้งชนเผ่าทุกวันพุธ เปิดตั้งแต่หมู่บ้าน 50 มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ',
+    noteTribal: 'ไวกิ้งวันพุธ เปิดตั้งแต่หมู่บ้าน 50 มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ',
     bet6: 'เดิมพันขั้นที่ 6',
     rangeBets: 'สลับระหว่าง{a}ถึง{b}จนกว่าโบนัสจะออก',
     noteSunday: 'ไวกิ้งวันอาทิตย์ ตอนนี้มีข้อมูลเฉพาะรางวัล 60K มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ'
@@ -334,7 +334,7 @@ window.I18N = {
     seqLess: 'Trình tự 2: ít xu',
     i_newCard: 'Thẻ mới',
     pathHintCrate: 'Chạm vào thùng rừng để mở thanh đó.',
-    noteTribal: 'Viking Bộ lạc mỗi thứ Tư, mở từ làng 50. Có hai trình tự cược tùy số xu.',
+    noteTribal: 'Viking thứ Tư, mở từ làng 50. Có hai trình tự cược tùy số xu.',
     bet6: 'Mức cược thứ 6',
     rangeBets: 'Xoay vòng từ {a} đến {b} đến khi ra thưởng.',
     noteSunday: 'Viking Chủ nhật. Hiện chỉ có dữ liệu giải 60K; có hai trình tự cược tùy số xu.'
@@ -389,7 +389,7 @@ window.I18N = {
     seqLess: 'Urutan 2: koin sedikit',
     i_newCard: 'Kartu baru',
     pathHintCrate: 'Ketuk peti hutan untuk membuka bar itu.',
-    noteTribal: 'Viking Suku setiap Rabu, mulai desa 50. Ada dua urutan taruhan sesuai jumlah koin.',
+    noteTribal: 'Viking Rabu, mulai desa 50. Ada dua urutan taruhan sesuai jumlah koin.',
     bet6: 'Taruhan ke-6',
     rangeBets: 'Gilir antara {a} sampai {b} hingga bonus keluar.',
     noteSunday: 'Viking Minggu. Baru hadiah 60K yang ada datanya; ada dua urutan taruhan sesuai jumlah koin.'
@@ -444,7 +444,7 @@ window.I18N = {
     seqLess: 'Secuencia 2: menos monedas',
     i_newCard: 'Carta nueva',
     pathHintCrate: 'Toca una caja de la selva para abrir esa barra.',
-    noteTribal: 'La vikinga tribal de los miércoles, desde la aldea 50. Dos secuencias según tus monedas.',
+    noteTribal: 'La vikinga de los miércoles, desde la aldea 50. Dos secuencias según tus monedas.',
     bet6: '6.ª apuesta',
     rangeBets: 'Alterna entre {a} y {b} hasta que salga el bonus.',
     noteSunday: 'La vikinga del domingo. Por ahora solo hay datos del premio de 60K; dos secuencias según tus monedas.'
@@ -499,7 +499,7 @@ window.I18N = {
     seqLess: 'Sequência 2: menos moedas',
     i_newCard: 'Carta nova',
     pathHintCrate: 'Toque numa caixa da selva para abrir essa barra.',
-    noteTribal: 'A viking tribal de quarta-feira, a partir da aldeia 50. Duas sequências conforme suas moedas.',
+    noteTribal: 'A viking de quarta-feira, a partir da aldeia 50. Duas sequências conforme suas moedas.',
     bet6: '6ª aposta',
     rangeBets: 'Alterne entre {a} e {b} até sair o bônus.',
     noteSunday: 'A viking de domingo. Por enquanto só há dados do prêmio de 60K; duas sequências conforme suas moedas.'
