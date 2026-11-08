@@ -269,7 +269,7 @@ button { cursor: pointer; }
 .page-body h3 { font-size: 15px; font-weight: 750; color: var(--ink-soft); margin-bottom: 14px; }
 
 .rule-line { font-size: 18px; font-weight: 600; max-width: 34em; }
-.ladder { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.ladder { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .rung {
   position: relative; display: grid; gap: 2px; align-content: start;
   padding: 14px 16px 12px; border-radius: var(--r-md);
@@ -278,10 +278,8 @@ button { cursor: pointer; }
 }
 .rung-open { background: color-mix(in srgb, var(--potion) 35%, #fff); border-color: color-mix(in srgb, var(--potion) 70%, #000); }
 .raise {
-  position: absolute; top: -11px; left: 12px; max-width: calc(100% - 20px);
-  font-size: 12px; font-weight: 700; color: #7A2131; line-height: 1.5;
-  background: var(--parchment); padding: 0 6px; border-radius: 4px;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  display: block; margin: -2px 0 4px;
+  font-size: 12px; font-weight: 700; color: #7A2131; line-height: 1.35;
 }
 .rung-bet { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 17px; }
 .rung-spins { color: var(--ink-soft); font-size: 15px; padding-left: 34px; }
@@ -294,7 +292,6 @@ button { cursor: pointer; }
     border-top: 2px solid var(--ink-soft); border-right: 2px solid var(--ink-soft);
     transform: translateY(-50%) rotate(45deg);
   }
-  .col-strategy > .ladder:not(.ladder-long) > .rung + .rung .raise { position: static; background: none; padding: 0; margin: -4px 0 4px; white-space: normal; }
 }
 .rule-notes { margin: 16px 0 0; padding-left: 20px; display: grid; gap: 6px; color: var(--ink-soft); }
 .note-cap { color: #7A2131; font-weight: 650; }
