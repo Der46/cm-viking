@@ -120,7 +120,7 @@
   /* ---------- 渲染 ---------- */
   function renderStatic() {
     document.documentElement.lang = state.lang;
-    document.title = t('siteTitle') + ' | 大佬群CSL';
+    document.title = t('siteTitle');
     document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = t(el.getAttribute('data-i18n')); });
     $('quest-tabs').setAttribute('aria-label', t('quests'));
     $('year').textContent = new Date().getFullYear();
