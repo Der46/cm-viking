@@ -123,6 +123,7 @@
     document.title = t('siteTitle');
     document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = t(el.getAttribute('data-i18n')); });
     $('quest-tabs').setAttribute('aria-label', t('quests'));
+    $('seal').setAttribute('aria-label', '大佬群CSL ' + t('madeBy'));
     $('year').textContent = new Date().getFullYear();
   }
 

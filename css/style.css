@@ -134,6 +134,7 @@ button { cursor: pointer; }
   line-height: 1.1; text-align: center;
 }
 .seal span { font-size: 12px; font-weight: 700; }
+.seal .seal-made { max-width: 84%; font-size: 11px; line-height: 1.15; overflow-wrap: anywhere; }
 .seal strong { font-family: var(--display); font-size: 30px; line-height: .95; font-weight: 800; color: #FFE7B0; }
 
 .quest-local { margin-top: 18px; font-size: clamp(18px, 2.6vw, 22px); font-weight: 650; color: var(--gold-soft); }

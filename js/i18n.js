@@ -62,7 +62,8 @@ window.I18N = {
     noteTribal: '週三維京，第 50 村起開放。依金幣存量有兩種下注順序。',
     bet6: '第六檔注',
     rangeBets: '{a}到{b}之間輪流轉，直到出獎勵。',
-    noteSunday: '週日維京。目前只有 60K 主獎有資料，依金幣存量有兩種下注順序。'
+    noteSunday: '週日維京。目前只有 60K 主獎有資料，依金幣存量有兩種下注順序。',
+    madeBy: '製作'
   },
   en: {
     siteTitle: 'Viking Quest Guide', tagline: 'Betting rhythm, coin goals and rewards for every bar, on one page.',
@@ -117,7 +118,8 @@ window.I18N = {
     noteTribal: 'The Wednesday Viking, open from village 50. Two betting sequences depending on your coins.',
     bet6: '6th bet',
     rangeBets: 'Rotate between {a} and {b} until the bonus lands.',
-    noteSunday: 'The Sunday Viking. Only the 60K prize has data so far; two betting sequences depending on your coins.'
+    noteSunday: 'The Sunday Viking. Only the 60K prize has data so far; two betting sequences depending on your coins.',
+    madeBy: 'Production'
   },
   ja: {
     siteTitle: 'バイキングクエスト攻略', tagline: '各バーのベット手順・目標コイン・報酬を1ページで。',
@@ -172,7 +174,8 @@ window.I18N = {
     noteTribal: '水曜のバイキング。村 50 から参加可。コイン量に応じて 2 つの手順があります。',
     bet6: '6段目のベット',
     rangeBets: '{a}から{b}の間で回し、ボーナスが出るまで続ける。',
-    noteSunday: '日曜のバイキング。現在データがあるのは 60K のみ。コイン量に応じて 2 つの手順があります。'
+    noteSunday: '日曜のバイキング。現在データがあるのは 60K のみ。コイン量に応じて 2 つの手順があります。',
+    madeBy: '制作'
   },
   ko: {
     siteTitle: '바이킹 퀘스트 공략', tagline: '바별 베팅 순서, 목표 코인, 보상을 한 페이지에.',
@@ -227,7 +230,8 @@ window.I18N = {
     noteTribal: '수요일 바이킹, 50번 마을부터 참여 가능. 코인 양에 따라 두 가지 베팅 순서가 있습니다.',
     bet6: '여섯 번째 베팅',
     rangeBets: '{a}부터 {b}까지 번갈아 돌리며 보너스가 나올 때까지 진행.',
-    noteSunday: '일요일 바이킹. 현재 60K 보상만 정보가 있으며, 코인 양에 따라 두 가지 베팅 순서가 있습니다.'
+    noteSunday: '일요일 바이킹. 현재 60K 보상만 정보가 있으며, 코인 양에 따라 두 가지 베팅 순서가 있습니다.',
+    madeBy: '제작'
   },
   th: {
     siteTitle: 'คู่มือภารกิจไวกิ้ง', tagline: 'จังหวะการเดิมพัน เป้าหมายเหรียญ และรางวัลของทุกบาร์ ในหน้าเดียว',
@@ -282,7 +286,8 @@ window.I18N = {
     noteTribal: 'ไวกิ้งวันพุธ เปิดตั้งแต่หมู่บ้าน 50 มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ',
     bet6: 'เดิมพันขั้นที่ 6',
     rangeBets: 'สลับระหว่าง{a}ถึง{b}จนกว่าโบนัสจะออก',
-    noteSunday: 'ไวกิ้งวันอาทิตย์ ตอนนี้มีข้อมูลเฉพาะรางวัล 60K มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ'
+    noteSunday: 'ไวกิ้งวันอาทิตย์ ตอนนี้มีข้อมูลเฉพาะรางวัล 60K มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ',
+    madeBy: 'จัดทำ'
   },
   vi: {
     siteTitle: 'Hướng dẫn nhiệm vụ Viking', tagline: 'Nhịp cược, mục tiêu xu và phần thưởng của từng thanh, gói gọn trong một trang.',
@@ -337,7 +342,8 @@ window.I18N = {
     noteTribal: 'Viking thứ Tư, mở từ làng 50. Có hai trình tự cược tùy số xu.',
     bet6: 'Mức cược thứ 6',
     rangeBets: 'Xoay vòng từ {a} đến {b} đến khi ra thưởng.',
-    noteSunday: 'Viking Chủ nhật. Hiện chỉ có dữ liệu giải 60K; có hai trình tự cược tùy số xu.'
+    noteSunday: 'Viking Chủ nhật. Hiện chỉ có dữ liệu giải 60K; có hai trình tự cược tùy số xu.',
+    madeBy: 'Thực hiện'
   },
   id: {
     siteTitle: 'Panduan Quest Viking', tagline: 'Pola taruhan, target koin, dan hadiah tiap bar dalam satu halaman.',
@@ -392,7 +398,8 @@ window.I18N = {
     noteTribal: 'Viking Rabu, mulai desa 50. Ada dua urutan taruhan sesuai jumlah koin.',
     bet6: 'Taruhan ke-6',
     rangeBets: 'Gilir antara {a} sampai {b} hingga bonus keluar.',
-    noteSunday: 'Viking Minggu. Baru hadiah 60K yang ada datanya; ada dua urutan taruhan sesuai jumlah koin.'
+    noteSunday: 'Viking Minggu. Baru hadiah 60K yang ada datanya; ada dua urutan taruhan sesuai jumlah koin.',
+    madeBy: 'Produksi'
   },
   es: {
     siteTitle: 'Guía de misiones vikingas', tagline: 'Ritmo de apuestas, meta de monedas y premios de cada barra, en una sola página.',
@@ -447,7 +454,8 @@ window.I18N = {
     noteTribal: 'La vikinga de los miércoles, desde la aldea 50. Dos secuencias según tus monedas.',
     bet6: '6.ª apuesta',
     rangeBets: 'Alterna entre {a} y {b} hasta que salga el bonus.',
-    noteSunday: 'La vikinga del domingo. Por ahora solo hay datos del premio de 60K; dos secuencias según tus monedas.'
+    noteSunday: 'La vikinga del domingo. Por ahora solo hay datos del premio de 60K; dos secuencias según tus monedas.',
+    madeBy: 'Producción'
   },
   pt: {
     siteTitle: 'Guia das missões vikings', tagline: 'Ritmo de apostas, meta de moedas e prêmios de cada barra, em uma página só.',
@@ -502,6 +510,7 @@ window.I18N = {
     noteTribal: 'A viking de quarta-feira, a partir da aldeia 50. Duas sequências conforme suas moedas.',
     bet6: '6ª aposta',
     rangeBets: 'Alterne entre {a} e {b} até sair o bônus.',
-    noteSunday: 'A viking de domingo. Por enquanto só há dados do prêmio de 60K; duas sequências conforme suas moedas.'
+    noteSunday: 'A viking de domingo. Por enquanto só há dados do prêmio de 60K; duas sequências conforme suas moedas.',
+    madeBy: 'Produção'
   }
 };
