@@ -129,7 +129,7 @@ button { cursor: pointer; }
     radial-gradient(circle at 32% 28%, rgba(255,255,255,.22), transparent 38%),
     radial-gradient(circle, #A62738 0 58%, var(--wax) 59% 100%);
   box-shadow: 0 0 0 4px rgba(142,31,46,.35), 0 10px 24px rgba(0,0,0,.45), inset 0 0 0 3px rgba(243,215,154,.45);
-  color: var(--gold-soft);
+  color: #F3D79A;
   transform: rotate(-10deg);
   line-height: 1.1; text-align: center;
 }
@@ -379,3 +379,50 @@ tbody th, tbody td { padding: 10px 16px; vertical-align: top; text-align: left; 
   .tier-prize { font-size: 26px; }
   .tier-prize .ic { width: 16px; height: 16px; }
 }
+
+/* =========================================================
+   活動維京任務：淡黃色主題
+   ========================================================= */
+body[data-theme="event"] {
+  --night: #FFF6D9;
+  --plum: #FFFDF4;
+  --plum-2: #FFF1C7;
+  --line: rgba(176, 116, 18, .32);
+  --gold: #B7791F;
+  --gold-soft: #8A5300;
+  --parchment: #FFFFFF;
+  --text: #3B2A10;
+  --muted: #6B5530;
+  background-image:
+    radial-gradient(900px 520px at 85% -10%, rgba(255, 196, 70, .38), transparent 70%),
+    radial-gradient(700px 500px at -10% 30%, rgba(255, 160, 110, .18), transparent 70%);
+}
+body[data-theme] { transition: background-color .3s, color .3s; }
+[data-theme="event"] .topbar { background: rgba(255, 246, 217, .9); border-bottom-color: rgba(176, 116, 18, .2); }
+[data-theme="event"] .lang { background: #fff; }
+[data-theme="event"] .lang option { background: #fff; color: var(--text); }
+[data-theme="event"] .quest-title { color: #5A3608; text-shadow: 0 2px 0 #F2C76B, 0 0 30px rgba(255, 196, 70, .45); }
+[data-theme="event"] .tier { background: #fff; border-color: rgba(176, 116, 18, .22); }
+[data-theme="event"] .tier.is-on { background: #FFE7A3; border-color: var(--gold); }
+[data-theme="event"] .tier-prize { color: var(--text); }
+[data-theme="event"] .tier-prize .ic { color: #1C7FAE; }
+[data-theme="event"] .tier-k-tierCards .tier-name { color: #1F6A93; }
+[data-theme="event"] .tier-k-tierSpins .tier-name { color: #2E7533; }
+[data-theme="event"] .tier-k-tierToken .tier-name { color: #8F5200; }
+[data-theme="event"] .book {
+  background: radial-gradient(120% 90% at 50% 0%, rgba(255, 214, 120, .45), transparent 60%), linear-gradient(180deg, #FFFDF4, #FFF1C7);
+  box-shadow: 0 30px 60px -34px rgba(120, 80, 0, .45), inset 0 1px 0 #fff;
+}
+[data-theme="event"] .book::before { border-color: rgba(176, 116, 18, .3); }
+[data-theme="event"] .path-line path { stroke: rgba(160, 100, 10, .55); }
+[data-theme="event"] .node.is-on { filter: drop-shadow(0 0 10px var(--potion)) drop-shadow(0 4px 6px rgba(120, 80, 0, .3)); }
+[data-theme="event"] .node.is-wheel::after { box-shadow: 0 0 0 2px #FFF6D9; }
+[data-theme="event"] .node-num { box-shadow: 0 1px 4px rgba(120, 80, 0, .35); }
+[data-theme="event"] .page { box-shadow: 0 0 0 1px rgba(176, 116, 18, .25), 0 26px 50px -28px rgba(120, 80, 0, .45); }
+[data-theme="event"] .rule-list li { background: #FFFDF4; }
+[data-theme="event"] .table-scroll { background: #FFFDF4; }
+[data-theme="event"] thead th { background: rgba(176, 116, 18, .08); }
+[data-theme="event"] tbody tr { border-top-color: rgba(120, 80, 0, .12); }
+[data-theme="event"] tbody tr.is-on { background: rgba(255, 196, 70, .25); }
+[data-theme="event"] .td-loot span { background: #FFF1C7; color: #4A3512; }
+[data-theme="event"] .footer { background: rgba(176, 116, 18, .08); border-top-color: rgba(176, 116, 18, .2); }

@@ -2,6 +2,7 @@
  * 維京任務資料 / Viking quest data
  * ------------------------------------------------------------------
  * 新增其他維京任務：在 VIKING_QUESTS 陣列裡再加一個物件即可，頁面會自動出現切換按鈕。
+ * 選填：theme: 'event'（淡黃色主題）、node: 'gift'（關卡地圖改用禮物盒，預設 'bottle' 藥水瓶）
  *
  * sequence.bars[n] 下注規則（文字會依語言自動產生，不用自己翻譯）：
  *   { kind: 'max' }                         使用最高下注
@@ -100,17 +101,19 @@ window.VIKING_QUESTS = [
   },
   {
     id: 'viking',
-    title: 'Viking Quest',
+    title: 'Event Viking Quest',
+    theme: 'event',   // 淡黃色主題（特殊活動）
+    node: 'gift',     // 關卡地圖用禮物盒
     name: {
-      'zh-TW': '維京任務',
-      en: 'Viking Quest',
-      ja: 'バイキングクエスト',
-      ko: '바이킹 퀘스트',
-      th: 'ภารกิจไวกิ้ง',
-      vi: 'Nhiệm vụ Viking',
-      id: 'Quest Viking',
-      es: 'Misión vikinga',
-      pt: 'Missão viking'
+      'zh-TW': '活動維京任務',
+      en: 'Event Viking Quest',
+      ja: 'イベント・バイキングクエスト',
+      ko: '이벤트 바이킹 퀘스트',
+      th: 'ภารกิจไวกิ้งอีเวนต์',
+      vi: 'Nhiệm vụ Viking sự kiện',
+      id: 'Quest Viking Event',
+      es: 'Misión vikinga de evento',
+      pt: 'Missão viking de evento'
     },
     colors: ['#F4C95D', '#E8A04F', '#6FD3A0', '#4FC1D9', '#5AAEF2',
              '#7F9BF5', '#B58CF2', '#EE84B8', '#F2725F', '#E9C46A'],

@@ -16,7 +16,7 @@ window.I18N = {
     bar: '第 {n} 關', goal: '目標', goalCoins: '贏得 {v} 金幣', goalWheel: '在獎勵轉盤贏得 {v} 金幣',
     strategy: '下注方式', rewards: '過關獎勵', grandPrize: '大獎', prev: '上一關', next: '下一關',
     maxBet: '使用目前可用的最高下注。', bet1: '最低注', bet2: '第二檔注', bet3: '第三檔注',
-    spinsN: '轉 {n} 次', untilBonus: '轉到出獎勵為止', ifNoBonus: '沒出獎勵就加注',
+    spinsN: '轉 {n} 次', untilBonus: '轉到出獎勵為止', ifNoBonus: '沒出獎勵就加注一次',
     capNote: '到此為止，不再往上加注。', restartNote: '獎勵一出，從最低注重新開始計算。',
     loopNote: '依序輪流這幾檔，直到出獎勵。', autoLowest: '最低注開自動轉。',
     freeSwitch: '只用前兩檔注，自由切換。', pickByCoins: '依金幣存量選擇：',
@@ -52,7 +52,8 @@ window.I18N = {
     noGoal: '圖源未提供',
     noteVk40: '卡牌路線，主獎 40K 次旋轉。圖源只列出獎勵，沒有目標金幣。',
     noteVk60: '中間的特別版，主獎 60K 次旋轉加寶箱。',
-    noteVk20: '代幣路線：20K 次旋轉、代幣與 1K 鑽石，但目標金幣最高。'
+    noteVk20: '代幣路線：20K 次旋轉、代幣與 1K 鑽石，但目標金幣最高。',
+    pathHintGift: '點選禮物盒查看該關'
   },
   en: {
     siteTitle: 'Viking Quest Guide', tagline: 'Betting rhythm, coin goals and rewards for every bar, on one page.',
@@ -61,7 +62,7 @@ window.I18N = {
     bar: 'Bar {n}', goal: 'Goal', goalCoins: 'Win {v} coins', goalWheel: 'Win {v} coins on the bonus wheel',
     strategy: 'How to bet', rewards: 'Rewards', grandPrize: 'Grand prize', prev: 'Previous bar', next: 'Next bar',
     maxBet: 'Use the highest bet you have.', bet1: 'Lowest bet', bet2: '2nd bet', bet3: '3rd bet',
-    spinsN: '{n} spins', untilBonus: 'Until the bonus lands', ifNoBonus: 'No bonus? Raise the bet',
+    spinsN: '{n} spins', untilBonus: 'Until the bonus lands', ifNoBonus: 'No bonus? Raise the bet once',
     capNote: 'Stop here. Don’t raise any higher.', restartNote: 'When the bonus lands, start counting again from the lowest bet.',
     loopNote: 'Keep cycling through these bets until the bonus lands.', autoLowest: 'Lowest bet on auto-spin.',
     freeSwitch: 'Stick to the first two bets and switch between them freely.', pickByCoins: 'Pick by how many coins you have:',
@@ -97,7 +98,8 @@ window.I18N = {
     noGoal: 'Not in source',
     noteVk40: 'Cards path, 40K spins main prize. The source lists rewards only, not coin goals.',
     noteVk60: 'The middle special: 60K spins plus chests as the main prize.',
-    noteVk20: 'Token path: 20K spins, tokens and 1K gems, but the highest coin goals.'
+    noteVk20: 'Token path: 20K spins, tokens and 1K gems, but the highest coin goals.',
+    pathHintGift: 'Tap a gift box to open that bar.'
   },
   ja: {
     siteTitle: 'バイキングクエスト攻略', tagline: '各バーのベット手順・目標コイン・報酬を1ページで。',
@@ -106,7 +108,7 @@ window.I18N = {
     bar: 'バー {n}', goal: '目標', goalCoins: '{v} コインを獲得', goalWheel: 'ボーナスホイールで {v} コインを獲得',
     strategy: 'ベットの仕方', rewards: '報酬', grandPrize: 'グランプライズ', prev: '前のバー', next: '次のバー',
     maxBet: '使える最大ベットで回す。', bet1: '最低ベット', bet2: '2段目のベット', bet3: '3段目のベット',
-    spinsN: '{n} 回スピン', untilBonus: 'ボーナスが出るまで', ifNoBonus: 'ボーナスなしならベットを上げる',
+    spinsN: '{n} 回スピン', untilBonus: 'ボーナスが出るまで', ifNoBonus: 'ボーナスなしならベットを1段だけ上げる',
     capNote: 'ここで止める。これ以上は上げない。', restartNote: 'ボーナスが出たら、最低ベットから数え直す。',
     loopNote: 'ボーナスが出るまでこれらのベットを順に繰り返す。', autoLowest: '最低ベットでオートスピン。',
     freeSwitch: '最初の2段のベットだけを使い、自由に切り替える。', pickByCoins: '手持ちのコインで選ぶ：',
@@ -142,7 +144,8 @@ window.I18N = {
     noGoal: '元資料になし',
     noteVk40: 'カードルート。メイン報酬は 40K スピン。元資料は報酬のみで、目標コインはありません。',
     noteVk60: '真ん中の特別版。メイン報酬は 60K スピンとチェスト。',
-    noteVk20: 'トークンルート：20K スピン、トークン、ジェム 1K。ただし目標コインは最も高い。'
+    noteVk20: 'トークンルート：20K スピン、トークン、ジェム 1K。ただし目標コインは最も高い。',
+    pathHintGift: 'ギフトボックスをタップしてバーを表示'
   },
   ko: {
     siteTitle: '바이킹 퀘스트 공략', tagline: '바별 베팅 순서, 목표 코인, 보상을 한 페이지에.',
@@ -151,7 +154,7 @@ window.I18N = {
     bar: '{n}번 바', goal: '목표', goalCoins: '코인 {v} 획득', goalWheel: '보너스 휠에서 코인 {v} 획득',
     strategy: '베팅 방법', rewards: '보상', grandPrize: '그랜드 상품', prev: '이전 바', next: '다음 바',
     maxBet: '가능한 최대 베팅으로 스핀.', bet1: '최저 베팅', bet2: '두 번째 베팅', bet3: '세 번째 베팅',
-    spinsN: '{n}회 스핀', untilBonus: '보너스가 나올 때까지', ifNoBonus: '보너스가 없으면 베팅 올리기',
+    spinsN: '{n}회 스핀', untilBonus: '보너스가 나올 때까지', ifNoBonus: '보너스가 없으면 베팅을 한 단계만 올리기',
     capNote: '여기까지. 더 이상 올리지 않습니다.', restartNote: '보너스가 나오면 최저 베팅부터 다시 셉니다.',
     loopNote: '보너스가 나올 때까지 이 베팅들을 순서대로 반복합니다.', autoLowest: '최저 베팅으로 자동 스핀.',
     freeSwitch: '처음 두 단계 베팅만 쓰고 자유롭게 바꿉니다.', pickByCoins: '보유 코인에 따라 선택:',
@@ -187,7 +190,8 @@ window.I18N = {
     noGoal: '원본에 없음',
     noteVk40: '카드 경로, 메인 보상 40K 스핀. 원본에는 보상만 있고 목표 코인은 없습니다.',
     noteVk60: '가운데 특별판, 메인 보상은 60K 스핀과 상자.',
-    noteVk20: '토큰 경로: 20K 스핀, 토큰, 보석 1K. 대신 목표 코인이 가장 높습니다.'
+    noteVk20: '토큰 경로: 20K 스핀, 토큰, 보석 1K. 대신 목표 코인이 가장 높습니다.',
+    pathHintGift: '선물 상자를 눌러 해당 바를 확인하세요.'
   },
   th: {
     siteTitle: 'คู่มือภารกิจไวกิ้ง', tagline: 'จังหวะการเดิมพัน เป้าหมายเหรียญ และรางวัลของทุกบาร์ ในหน้าเดียว',
@@ -196,7 +200,7 @@ window.I18N = {
     bar: 'บาร์ {n}', goal: 'เป้าหมาย', goalCoins: 'ชนะ {v} เหรียญ', goalWheel: 'ชนะ {v} เหรียญจากวงล้อโบนัส',
     strategy: 'วิธีเดิมพัน', rewards: 'รางวัล', grandPrize: 'รางวัลใหญ่', prev: 'บาร์ก่อนหน้า', next: 'บาร์ถัดไป',
     maxBet: 'ใช้เดิมพันสูงสุดที่มี', bet1: 'เดิมพันต่ำสุด', bet2: 'เดิมพันขั้นที่ 2', bet3: 'เดิมพันขั้นที่ 3',
-    spinsN: 'หมุน {n} ครั้ง', untilBonus: 'จนกว่าโบนัสจะออก', ifNoBonus: 'โบนัสไม่ออก? เพิ่มเดิมพัน',
+    spinsN: 'หมุน {n} ครั้ง', untilBonus: 'จนกว่าโบนัสจะออก', ifNoBonus: 'โบนัสไม่ออก? เพิ่มเดิมพันหนึ่งขั้น',
     capNote: 'หยุดแค่นี้ ไม่เพิ่มสูงกว่านี้', restartNote: 'เมื่อโบนัสออก ให้เริ่มนับใหม่จากเดิมพันต่ำสุด',
     loopNote: 'วนเดิมพันเหล่านี้ตามลำดับจนกว่าโบนัสจะออก', autoLowest: 'เดิมพันต่ำสุดแบบหมุนอัตโนมัติ',
     freeSwitch: 'ใช้แค่สองขั้นแรก สลับไปมาได้ตามสะดวก', pickByCoins: 'เลือกตามจำนวนเหรียญที่มี:',
@@ -232,7 +236,8 @@ window.I18N = {
     noGoal: 'ต้นฉบับไม่ได้ระบุ',
     noteVk40: 'สายการ์ด รางวัลหลัก 40K สปิน ต้นฉบับมีแต่รางวัล ไม่มีเป้าหมายเหรียญ',
     noteVk60: 'แบบพิเศษตรงกลาง รางวัลหลัก 60K สปินพร้อมหีบ',
-    noteVk20: 'สายโทเคน: 20K สปิน โทเคน และอัญมณี 1K แต่เป้าหมายเหรียญสูงที่สุด'
+    noteVk20: 'สายโทเคน: 20K สปิน โทเคน และอัญมณี 1K แต่เป้าหมายเหรียญสูงที่สุด',
+    pathHintGift: 'แตะกล่องของขวัญเพื่อเปิดบาร์นั้น'
   },
   vi: {
     siteTitle: 'Hướng dẫn nhiệm vụ Viking', tagline: 'Nhịp cược, mục tiêu xu và phần thưởng của từng thanh, gói gọn trong một trang.',
@@ -241,7 +246,7 @@ window.I18N = {
     bar: 'Thanh {n}', goal: 'Mục tiêu', goalCoins: 'Thắng {v} xu', goalWheel: 'Thắng {v} xu ở vòng quay thưởng',
     strategy: 'Cách đặt cược', rewards: 'Phần thưởng', grandPrize: 'Giải lớn', prev: 'Thanh trước', next: 'Thanh sau',
     maxBet: 'Dùng mức cược cao nhất bạn có.', bet1: 'Mức cược thấp nhất', bet2: 'Mức cược thứ 2', bet3: 'Mức cược thứ 3',
-    spinsN: '{n} lượt quay', untilBonus: 'Đến khi ra thưởng', ifNoBonus: 'Không ra thưởng? Tăng cược',
+    spinsN: '{n} lượt quay', untilBonus: 'Đến khi ra thưởng', ifNoBonus: 'Không ra thưởng? Tăng cược một mức',
     capNote: 'Dừng ở đây. Không tăng thêm nữa.', restartNote: 'Khi ra thưởng, đếm lại từ mức cược thấp nhất.',
     loopNote: 'Lần lượt xoay vòng các mức này đến khi ra thưởng.', autoLowest: 'Mức cược thấp nhất, quay tự động.',
     freeSwitch: 'Chỉ dùng hai mức cược đầu và đổi qua lại tùy ý.', pickByCoins: 'Chọn theo số xu bạn có:',
@@ -277,7 +282,8 @@ window.I18N = {
     noGoal: 'Nguồn không ghi',
     noteVk40: 'Nhánh thẻ, giải chính 40K lượt quay. Nguồn chỉ ghi phần thưởng, không có mục tiêu xu.',
     noteVk60: 'Bản đặc biệt ở giữa: giải chính 60K lượt quay kèm rương.',
-    noteVk20: 'Nhánh token: 20K lượt quay, token và 1K đá quý, nhưng mục tiêu xu cao nhất.'
+    noteVk20: 'Nhánh token: 20K lượt quay, token và 1K đá quý, nhưng mục tiêu xu cao nhất.',
+    pathHintGift: 'Chạm vào hộp quà để mở thanh đó.'
   },
   id: {
     siteTitle: 'Panduan Quest Viking', tagline: 'Pola taruhan, target koin, dan hadiah tiap bar dalam satu halaman.',
@@ -286,7 +292,7 @@ window.I18N = {
     bar: 'Bar {n}', goal: 'Target', goalCoins: 'Menangkan {v} koin', goalWheel: 'Menangkan {v} koin di roda bonus',
     strategy: 'Cara bertaruh', rewards: 'Hadiah', grandPrize: 'Hadiah besar', prev: 'Bar sebelumnya', next: 'Bar berikutnya',
     maxBet: 'Pakai taruhan tertinggi yang tersedia.', bet1: 'Taruhan terendah', bet2: 'Taruhan ke-2', bet3: 'Taruhan ke-3',
-    spinsN: '{n} putaran', untilBonus: 'Sampai bonus keluar', ifNoBonus: 'Bonus belum keluar? Naikkan taruhan',
+    spinsN: '{n} putaran', untilBonus: 'Sampai bonus keluar', ifNoBonus: 'Bonus belum keluar? Naikkan taruhan satu tingkat',
     capNote: 'Berhenti di sini. Jangan naik lagi.', restartNote: 'Begitu bonus keluar, hitung ulang dari taruhan terendah.',
     loopNote: 'Putar bergiliran taruhan-taruhan ini sampai bonus keluar.', autoLowest: 'Taruhan terendah dengan putar otomatis.',
     freeSwitch: 'Pakai dua taruhan pertama saja dan ganti-ganti sesukamu.', pickByCoins: 'Pilih sesuai jumlah koinmu:',
@@ -322,7 +328,8 @@ window.I18N = {
     noGoal: 'Tidak ada di sumber',
     noteVk40: 'Jalur kartu, hadiah utama 40K putaran. Sumber hanya mencantumkan hadiah, tanpa target koin.',
     noteVk60: 'Edisi spesial tengah: hadiah utama 60K putaran plus peti.',
-    noteVk20: 'Jalur token: 20K putaran, token, dan 1K permata, tapi target koinnya paling tinggi.'
+    noteVk20: 'Jalur token: 20K putaran, token, dan 1K permata, tapi target koinnya paling tinggi.',
+    pathHintGift: 'Ketuk kotak hadiah untuk membuka bar itu.'
   },
   es: {
     siteTitle: 'Guía de misiones vikingas', tagline: 'Ritmo de apuestas, meta de monedas y premios de cada barra, en una sola página.',
@@ -331,7 +338,7 @@ window.I18N = {
     bar: 'Barra {n}', goal: 'Meta', goalCoins: 'Gana {v} monedas', goalWheel: 'Gana {v} monedas en la rueda de bonus',
     strategy: 'Cómo apostar', rewards: 'Premios', grandPrize: 'Gran premio', prev: 'Barra anterior', next: 'Barra siguiente',
     maxBet: 'Usa la apuesta más alta que tengas.', bet1: 'Apuesta mínima', bet2: '2.ª apuesta', bet3: '3.ª apuesta',
-    spinsN: '{n} tiradas', untilBonus: 'Hasta que salga el bonus', ifNoBonus: '¿Sin bonus? Sube la apuesta',
+    spinsN: '{n} tiradas', untilBonus: 'Hasta que salga el bonus', ifNoBonus: '¿Sin bonus? Sube la apuesta una vez',
     capNote: 'Para aquí. No subas más.', restartNote: 'Cuando salga el bonus, vuelve a contar desde la apuesta mínima.',
     loopNote: 'Ve alternando estas apuestas en orden hasta que salga el bonus.', autoLowest: 'Apuesta mínima en tirada automática.',
     freeSwitch: 'Usa solo las dos primeras apuestas y cambia entre ellas libremente.', pickByCoins: 'Elige según tus monedas:',
@@ -367,7 +374,8 @@ window.I18N = {
     noGoal: 'No figura en la fuente',
     noteVk40: 'Ruta de cartas, premio principal de 40K tiradas. La fuente solo indica premios, no metas de monedas.',
     noteVk60: 'La especial del medio: 60K tiradas y cofres como premio principal.',
-    noteVk20: 'Ruta de fichas: 20K tiradas, fichas y 1K gemas, pero con las metas de monedas más altas.'
+    noteVk20: 'Ruta de fichas: 20K tiradas, fichas y 1K gemas, pero con las metas de monedas más altas.',
+    pathHintGift: 'Toca una caja de regalo para abrir esa barra.'
   },
   pt: {
     siteTitle: 'Guia das missões vikings', tagline: 'Ritmo de apostas, meta de moedas e prêmios de cada barra, em uma página só.',
@@ -376,7 +384,7 @@ window.I18N = {
     bar: 'Barra {n}', goal: 'Meta', goalCoins: 'Ganhe {v} moedas', goalWheel: 'Ganhe {v} moedas na roda de bônus',
     strategy: 'Como apostar', rewards: 'Prêmios', grandPrize: 'Grande prêmio', prev: 'Barra anterior', next: 'Próxima barra',
     maxBet: 'Use a maior aposta que você tiver.', bet1: 'Aposta mínima', bet2: '2ª aposta', bet3: '3ª aposta',
-    spinsN: '{n} giros', untilBonus: 'Até sair o bônus', ifNoBonus: 'Sem bônus? Aumente a aposta',
+    spinsN: '{n} giros', untilBonus: 'Até sair o bônus', ifNoBonus: 'Sem bônus? Aumente a aposta uma vez',
     capNote: 'Pare aqui. Não aumente mais.', restartNote: 'Quando o bônus sair, volte a contar a partir da aposta mínima.',
     loopNote: 'Alterne essas apostas em ordem até sair o bônus.', autoLowest: 'Aposta mínima no giro automático.',
     freeSwitch: 'Use só as duas primeiras apostas e troque entre elas à vontade.', pickByCoins: 'Escolha conforme suas moedas:',
@@ -412,6 +420,7 @@ window.I18N = {
     noGoal: 'Não consta na fonte',
     noteVk40: 'Rota das cartas, prêmio principal de 40K giros. A fonte só traz os prêmios, sem metas de moedas.',
     noteVk60: 'A especial do meio: 60K giros e baús como prêmio principal.',
-    noteVk20: 'Rota das fichas: 20K giros, fichas e 1K gemas, mas com as metas de moedas mais altas.'
+    noteVk20: 'Rota das fichas: 20K giros, fichas e 1K gemas, mas com as metas de moedas mais altas.',
+    pathHintGift: 'Toque numa caixa de presente para abrir essa barra.'
   }
 };

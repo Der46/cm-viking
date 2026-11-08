@@ -142,7 +142,11 @@
 
   function renderHero() {
     var q = quest();
+    document.body.setAttribute('data-theme', q.theme || 'default');
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', q.theme === 'event' ? '#FFF6D9' : '#17112B');
     $('quest-title').textContent = q.title;
+    document.querySelector('.path-hint').textContent = t(q.node === 'gift' ? 'pathHintGift' : 'pathHint');
     var local = q.name[state.lang];
     $('quest-local').textContent = local && local !== q.title ? local : '';
     $('quest-local').hidden = !$('quest-local').textContent;
@@ -179,7 +183,7 @@
       b.dataset.bar = n;
       b.setAttribute('aria-label', t('bar', { n: n }));
       if (n === state.bar) b.setAttribute('aria-current', 'step');
-      b.innerHTML = '<svg class="flask" aria-hidden="true"><use href="#bottle"/></svg>' +
+      b.innerHTML = '<svg class="flask" aria-hidden="true"><use href="#' + (q.node || 'bottle') + '"/></svg>' +
         '<span class="node-num" aria-hidden="true">' + n + '</span>';
       wrap.appendChild(b);
     });
