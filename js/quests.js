@@ -2,7 +2,8 @@
  * 維京任務資料 / Viking quest data
  * ------------------------------------------------------------------
  * 新增其他維京任務：在 VIKING_QUESTS 陣列裡再加一個物件即可，頁面會自動出現切換按鈕。
- * 選填：theme: 'event'（淡黃色主題）、node: 'gift'（關卡地圖改用禮物盒，預設 'bottle' 藥水瓶）
+ * 選填：theme: 'event'（淡黃）/ 'tribal'（淡綠）；node: 'gift' 禮物盒 / 'crate' 叢林箱（預設 'bottle' 藥水瓶）
+ * 兩種下注順序：每關用 { kind: 'choice', options: [{ when: 'seqMore', rule }, { when: 'seqLess', rule }] }
  *
  * sequence.bars[n] 下注規則（文字會依語言自動產生，不用自己翻譯）：
  *   { kind: 'max' }                         使用最高下注
@@ -182,6 +183,87 @@ window.VIKING_QUESTS = [
           { goal: '25.68T', rewards: [{ t: 'spins', v: '18.5K' }, { t: 'bigSeasonal' }, { t: 'goldenHammers' }] },
           { goal: '13.26T', wheel: true, rewards: [{ t: 'goldCard' }, { t: 'spins', v: '5K' }, { t: 'petxp', v: '1.7M' }, { t: 'coinCraze', p: '200%' }] },
           { goal: '52.92T', rewards: [{ t: 'spins', v: '20K' }, { t: 'tokens', v: '3' }, { t: 'tokenBox' }, { t: 'gems', v: '1K' }, { t: 'redHammers' }] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'tribal',
+    title: 'Tribal Viking Quest',
+    theme: 'tribal',  // 淡綠色主題（每週三）
+    node: 'crate',    // 關卡地圖用叢林箱
+    name: {
+      'zh-TW': '部落維京（週三維京）',
+      en: 'Tribal Viking Quest (Wednesday)',
+      ja: 'トライバル・バイキング（水曜）',
+      ko: '부족 바이킹 퀘스트 (수요일)',
+      th: 'ภารกิจไวกิ้งชนเผ่า (วันพุธ)',
+      vi: 'Nhiệm vụ Viking Bộ lạc (thứ Tư)',
+      id: 'Quest Viking Suku (Rabu)',
+      es: 'Misión vikinga tribal (miércoles)',
+      pt: 'Missão viking tribal (quarta-feira)'
+    },
+    colors: ['#7FB24A', '#9CCB5B', '#5FAE6E', '#C99B4A', '#4E79C9',
+             '#45B8B8', '#A9A196', '#D3B84E', '#E07A3F', '#3FA37A'],
+    sequence: {
+      // 順序 1 = 金幣較多、順序 2 = 金幣較少
+      bars: {
+        1: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'auto', bet: 5 } },
+          { when: 'seqLess', rule: { kind: 'auto', bet: 4 } }
+        ] },
+        2: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'max', auto: true } },
+          { when: 'seqLess', rule: { kind: 'max', auto: true } }
+        ] },
+        3: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'max', auto: true } },
+          { when: 'seqLess', rule: { kind: 'max', auto: true } }
+        ] },
+        4: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'max', auto: true } },
+          { when: 'seqLess', rule: { kind: 'ladder', steps: [[2, 10], [3, 10], [4, 10]], more: true } }
+        ] },
+        5: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'max', auto: true } },
+          { when: 'seqLess', rule: { kind: 'ladder', steps: [[2, 10], [3, 10], [4, 10]], more: true } }
+        ] },
+        6: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'ladder', steps: [[2, 15], [3, 15], [4, 15]], more: true } },
+          { when: 'seqLess', rule: { kind: 'ladder', steps: [[1, 15], [2, 15], [3, 15], [4, 15]], loop: true } }
+        ] },
+        7: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'ladder', steps: [[2, 20], [3, 20], [4, 20]], more: true } },
+          { when: 'seqLess', rule: { kind: 'ladder', steps: [[1, 20], [2, 20], [3, 20]], loop: true } }
+        ] },
+        8: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'ladder', steps: [[1, 10], [2, 10], [3, 10]], more: true } },
+          { when: 'seqLess', rule: { kind: 'ladder', steps: [[1, 20], [2, 20], [3, 20], [4, 20]], loop: true } }
+        ] },
+        9: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'ladder', steps: [[1, 20], [2, 20], [3, 20]], loop: true } },
+          { when: 'seqLess', rule: { kind: 'auto' } }
+        ] },
+        10: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'ladder', steps: [[2, 20], [3, 20], [4, 20]], loop: true } },
+          { when: 'seqLess', rule: { kind: 'auto' } }
+        ] }
+      }
+    },
+    tiers: [
+      {
+        id: '45k', prize: '45K', label: 'grandPrize', note: 'noteTribal',
+        bars: [
+          { goal: '930B', rewards: [{ t: 'coins', v: '65B' }, { t: 'spins', v: '1.5K' }, { t: 'petxp', v: '250K' }] },
+          { goal: '450B', rewards: [{ t: 'coins', v: '18B' }, { t: 'petxp', v: '175K' }, { t: 'magicalChest' }] },
+          { goal: '2.8T', rewards: [{ t: 'coins', v: '75B' }, { t: 'spins', v: '2.5K' }, { t: 'petxp', v: '300K' }, { t: 'regularChest' }] },
+          { goal: '510B', wheel: true, rewards: [{ t: 'coins', v: '42B' }, { t: 'regularChest' }, { t: 'petxp', v: '200K' }] },
+          { goal: '3.1T', rewards: [{ t: 'coins', v: '100B' }, { t: 'spins', v: '3.5K' }] },
+          { goal: '8.7T', rewards: [{ t: 'spins', v: '8K' }, { t: 'magicalChest' }, { t: 'petxp', v: '600K' }] },
+          { goal: '2.4T', wheel: true, rewards: [{ t: 'coins', v: '240B' }, { t: 'petxp', v: '400K' }] },
+          { goal: '10T', rewards: [{ t: 'coins', v: '150B' }, { t: 'spins', v: '10K' }, { t: 'regularChest' }] },
+          { goal: '5.8T', wheel: true, rewards: [{ t: 'spins', v: '3.5K' }, { t: 'petxp', v: '900K' }] },
+          { goal: '19.7T', rewards: [{ t: 'coins', v: '250B' }, { t: 'spins', v: '45K' }, { t: 'petxp', v: '2.3M' }, { t: 'regularChest' }, { t: 'newCard' }] }
         ]
       }
     ]

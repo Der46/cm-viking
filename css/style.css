@@ -381,48 +381,59 @@ tbody th, tbody td { padding: 10px 16px; vertical-align: top; text-align: left; 
 }
 
 /* =========================================================
-   活動維京任務：淡黃色主題
+   淺色主題：活動維京（淡黃）、部落維京（淡綠）
+   各主題只換色票，共用的版面覆寫寫在 .tone-light 底下
    ========================================================= */
 body[data-theme="event"] {
-  --night: #FFF6D9;
-  --plum: #FFFDF4;
-  --plum-2: #FFF1C7;
-  --line: rgba(176, 116, 18, .32);
-  --gold: #B7791F;
-  --gold-soft: #8A5300;
-  --parchment: #FFFFFF;
-  --text: #3B2A10;
-  --muted: #6B5530;
+  --night: #FFF6D9; --plum: #FFFDF4; --plum-2: #FFF1C7;
+  --line: rgba(176, 116, 18, .32); --gold: #B7791F; --gold-soft: #8A5300;
+  --parchment: #FFFFFF; --text: #3B2A10; --muted: #6B5530;
+  --edge: rgba(176, 116, 18, .22); --tint: rgba(176, 116, 18, .08); --shade: rgba(120, 80, 0, .4);
+  --chip: #FFF1C7; --chip-text: #4A3512; --tier-on: #FFE7A3; --row-on: rgba(255, 196, 70, .25);
+  --title: #5A3608; --title-shadow: #F2C76B; --glow: rgba(255, 196, 70, .38); --glow-2: rgba(255, 160, 110, .18);
+  --bar-bg: rgba(255, 246, 217, .9);
+}
+body[data-theme="tribal"] {
+  --night: #EEF6E2; --plum: #FBFEF6; --plum-2: #E1F0CD;
+  --line: rgba(70, 120, 40, .32); --gold: #4F8A2B; --gold-soft: #2F5E15;
+  --parchment: #FFFFFF; --text: #233219; --muted: #4D6140;
+  --edge: rgba(70, 120, 40, .22); --tint: rgba(70, 120, 40, .08); --shade: rgba(40, 80, 20, .35);
+  --chip: #E1F0CD; --chip-text: #2B4019; --tier-on: #D3EBB4; --row-on: rgba(140, 200, 90, .25);
+  --title: #2F5216; --title-shadow: #BFE09A; --glow: rgba(170, 220, 110, .42); --glow-2: rgba(240, 210, 120, .2);
+  --bar-bg: rgba(238, 246, 226, .9);
+}
+body.tone-light {
   background-image:
-    radial-gradient(900px 520px at 85% -10%, rgba(255, 196, 70, .38), transparent 70%),
-    radial-gradient(700px 500px at -10% 30%, rgba(255, 160, 110, .18), transparent 70%);
+    radial-gradient(900px 520px at 85% -10%, var(--glow), transparent 70%),
+    radial-gradient(700px 500px at -10% 30%, var(--glow-2), transparent 70%);
 }
 body[data-theme] { transition: background-color .3s, color .3s; }
-[data-theme="event"] .topbar { background: rgba(255, 246, 217, .9); border-bottom-color: rgba(176, 116, 18, .2); }
-[data-theme="event"] .lang { background: #fff; }
-[data-theme="event"] .lang option { background: #fff; color: var(--text); }
-[data-theme="event"] .quest-title { color: #5A3608; text-shadow: 0 2px 0 #F2C76B, 0 0 30px rgba(255, 196, 70, .45); }
-[data-theme="event"] .tier { background: #fff; border-color: rgba(176, 116, 18, .22); }
-[data-theme="event"] .tier.is-on { background: #FFE7A3; border-color: var(--gold); }
-[data-theme="event"] .tier-prize { color: var(--text); }
-[data-theme="event"] .tier-prize .ic { color: #1C7FAE; }
-[data-theme="event"] .tier-k-tierCards .tier-name { color: #1F6A93; }
-[data-theme="event"] .tier-k-tierSpins .tier-name { color: #2E7533; }
-[data-theme="event"] .tier-k-tierToken .tier-name { color: #8F5200; }
-[data-theme="event"] .book {
-  background: radial-gradient(120% 90% at 50% 0%, rgba(255, 214, 120, .45), transparent 60%), linear-gradient(180deg, #FFFDF4, #FFF1C7);
-  box-shadow: 0 30px 60px -34px rgba(120, 80, 0, .45), inset 0 1px 0 #fff;
+.tone-light .topbar { background: var(--bar-bg); border-bottom-color: var(--edge); }
+.tone-light .lang { background: #fff; }
+.tone-light .lang option { background: #fff; color: var(--text); }
+.tone-light .quest-title { color: var(--title); text-shadow: 0 2px 0 var(--title-shadow), 0 0 30px var(--glow); }
+.tone-light .tier { background: #fff; border-color: var(--edge); }
+.tone-light .tier.is-on { background: var(--tier-on); border-color: var(--gold); }
+.tone-light .tier-prize { color: var(--text); }
+.tone-light .tier-prize .ic { color: #1C7FAE; }
+.tone-light .tier-k-tierCards .tier-name { color: #1F6A93; }
+.tone-light .tier-k-tierSpins .tier-name { color: #2E7533; }
+.tone-light .tier-k-tierToken .tier-name { color: #8F5200; }
+.tone-light .tier-k-grandPrize .tier-name { color: var(--gold-soft); }
+.tone-light .book {
+  background: radial-gradient(120% 90% at 50% 0%, var(--glow), transparent 60%), linear-gradient(180deg, var(--plum), var(--plum-2));
+  box-shadow: 0 30px 60px -34px var(--shade), inset 0 1px 0 #fff;
 }
-[data-theme="event"] .book::before { border-color: rgba(176, 116, 18, .3); }
-[data-theme="event"] .path-line path { stroke: rgba(160, 100, 10, .55); }
-[data-theme="event"] .node.is-on { filter: drop-shadow(0 0 10px var(--potion)) drop-shadow(0 4px 6px rgba(120, 80, 0, .3)); }
-[data-theme="event"] .node.is-wheel::after { box-shadow: 0 0 0 2px #FFF6D9; }
-[data-theme="event"] .node-num { box-shadow: 0 1px 4px rgba(120, 80, 0, .35); }
-[data-theme="event"] .page { box-shadow: 0 0 0 1px rgba(176, 116, 18, .25), 0 26px 50px -28px rgba(120, 80, 0, .45); }
-[data-theme="event"] .rule-list li { background: #FFFDF4; }
-[data-theme="event"] .table-scroll { background: #FFFDF4; }
-[data-theme="event"] thead th { background: rgba(176, 116, 18, .08); }
-[data-theme="event"] tbody tr { border-top-color: rgba(120, 80, 0, .12); }
-[data-theme="event"] tbody tr.is-on { background: rgba(255, 196, 70, .25); }
-[data-theme="event"] .td-loot span { background: #FFF1C7; color: #4A3512; }
-[data-theme="event"] .footer { background: rgba(176, 116, 18, .08); border-top-color: rgba(176, 116, 18, .2); }
+.tone-light .book::before { border-color: var(--line); }
+.tone-light .path-line path { stroke: var(--gold); stroke-opacity: .6; }
+.tone-light .node.is-on { filter: drop-shadow(0 0 10px var(--potion)) drop-shadow(0 4px 6px var(--shade)); }
+.tone-light .node.is-wheel::after { box-shadow: 0 0 0 2px var(--night); }
+.tone-light .node-num { box-shadow: 0 1px 4px var(--shade); }
+.tone-light .page { box-shadow: 0 0 0 1px var(--edge), 0 26px 50px -28px var(--shade); }
+.tone-light .rule-list li { background: var(--plum); }
+.tone-light .table-scroll { background: var(--plum); }
+.tone-light thead th { background: var(--tint); }
+.tone-light tbody tr { border-top-color: var(--edge); }
+.tone-light tbody tr.is-on { background: var(--row-on); }
+.tone-light .td-loot span { background: var(--chip); color: var(--chip-text); }
+.tone-light .footer { background: var(--tint); border-top-color: var(--edge); }

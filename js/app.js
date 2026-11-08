@@ -142,11 +142,13 @@
 
   function renderHero() {
     var q = quest();
+    var light = { event: '#FFF6D9', tribal: '#EEF6E2' };
     document.body.setAttribute('data-theme', q.theme || 'default');
+    document.body.classList.toggle('tone-light', !!light[q.theme]);
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', q.theme === 'event' ? '#FFF6D9' : '#17112B');
+    if (meta) meta.setAttribute('content', light[q.theme] || '#17112B');
     $('quest-title').textContent = q.title;
-    document.querySelector('.path-hint').textContent = t(q.node === 'gift' ? 'pathHintGift' : 'pathHint');
+    document.querySelector('.path-hint').textContent = t({ gift: 'pathHintGift', crate: 'pathHintCrate' }[q.node] || 'pathHint');
     var local = q.name[state.lang];
     $('quest-local').textContent = local && local !== q.title ? local : '';
     $('quest-local').hidden = !$('quest-local').textContent;
@@ -159,7 +161,7 @@
         (x.popular ? '<span class="tier-pop">' + esc(t('mostPopular')) + '</span>' : '') +
         '<span class="tier-prize">' + icon('spins') + x.prize + '</span>' +
         '<span class="tier-name">' + esc(t(x.label)) + '</span>' +
-        '<span class="tier-cards">' + esc(t('goldenCards', { n: x.cards })) + '</span>' +
+        (x.cards ? '<span class="tier-cards">' + esc(t('goldenCards', { n: x.cards })) + '</span>' : '') +
         '</label>';
     }).join('');
     $('tier-note').textContent = cur.note ? t(cur.note) : '';

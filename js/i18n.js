@@ -53,7 +53,13 @@ window.I18N = {
     noteVk40: '卡牌路線，主獎 40K 次旋轉。圖源只列出獎勵，沒有目標金幣。',
     noteVk60: '中間的特別版，主獎 60K 次旋轉加寶箱。',
     noteVk20: '代幣路線：20K 次旋轉、代幣與 1K 鑽石，但目標金幣最高。',
-    pathHintGift: '點選禮物盒查看該關'
+    pathHintGift: '點選禮物盒查看該關',
+    bet5: '第五檔注',
+    seqMore: '順序 1：金幣較多',
+    seqLess: '順序 2：金幣較少',
+    i_newCard: '新卡片',
+    pathHintCrate: '點選叢林箱查看該關',
+    noteTribal: '每週三的部落維京，第 50 村起開放。依金幣存量有兩種下注順序。'
   },
   en: {
     siteTitle: 'Viking Quest Guide', tagline: 'Betting rhythm, coin goals and rewards for every bar, on one page.',
@@ -99,7 +105,13 @@ window.I18N = {
     noteVk40: 'Cards path, 40K spins main prize. The source lists rewards only, not coin goals.',
     noteVk60: 'The middle special: 60K spins plus chests as the main prize.',
     noteVk20: 'Token path: 20K spins, tokens and 1K gems, but the highest coin goals.',
-    pathHintGift: 'Tap a gift box to open that bar.'
+    pathHintGift: 'Tap a gift box to open that bar.',
+    bet5: '5th bet',
+    seqMore: 'Sequence 1: more coins',
+    seqLess: 'Sequence 2: fewer coins',
+    i_newCard: 'New card',
+    pathHintCrate: 'Tap a jungle crate to open that bar.',
+    noteTribal: 'The Wednesday Tribal Viking, open from village 50. Two betting sequences depending on your coins.'
   },
   ja: {
     siteTitle: 'バイキングクエスト攻略', tagline: '各バーのベット手順・目標コイン・報酬を1ページで。',
@@ -145,7 +157,13 @@ window.I18N = {
     noteVk40: 'カードルート。メイン報酬は 40K スピン。元資料は報酬のみで、目標コインはありません。',
     noteVk60: '真ん中の特別版。メイン報酬は 60K スピンとチェスト。',
     noteVk20: 'トークンルート：20K スピン、トークン、ジェム 1K。ただし目標コインは最も高い。',
-    pathHintGift: 'ギフトボックスをタップしてバーを表示'
+    pathHintGift: 'ギフトボックスをタップしてバーを表示',
+    bet5: '5段目のベット',
+    seqMore: '手順 1：コインが多い時',
+    seqLess: '手順 2：コインが少ない時',
+    i_newCard: '新カード',
+    pathHintCrate: 'ジャングルの箱をタップしてバーを表示',
+    noteTribal: '毎週水曜のトライバル・バイキング。村 50 から参加可。コイン量に応じて 2 つの手順があります。'
   },
   ko: {
     siteTitle: '바이킹 퀘스트 공략', tagline: '바별 베팅 순서, 목표 코인, 보상을 한 페이지에.',
@@ -191,7 +209,13 @@ window.I18N = {
     noteVk40: '카드 경로, 메인 보상 40K 스핀. 원본에는 보상만 있고 목표 코인은 없습니다.',
     noteVk60: '가운데 특별판, 메인 보상은 60K 스핀과 상자.',
     noteVk20: '토큰 경로: 20K 스핀, 토큰, 보석 1K. 대신 목표 코인이 가장 높습니다.',
-    pathHintGift: '선물 상자를 눌러 해당 바를 확인하세요.'
+    pathHintGift: '선물 상자를 눌러 해당 바를 확인하세요.',
+    bet5: '다섯 번째 베팅',
+    seqMore: '순서 1: 코인이 많을 때',
+    seqLess: '순서 2: 코인이 적을 때',
+    i_newCard: '새 카드',
+    pathHintCrate: '정글 상자를 눌러 해당 바를 확인하세요.',
+    noteTribal: '매주 수요일 부족 바이킹, 50번 마을부터 참여 가능. 코인 양에 따라 두 가지 베팅 순서가 있습니다.'
   },
   th: {
     siteTitle: 'คู่มือภารกิจไวกิ้ง', tagline: 'จังหวะการเดิมพัน เป้าหมายเหรียญ และรางวัลของทุกบาร์ ในหน้าเดียว',
@@ -237,7 +261,13 @@ window.I18N = {
     noteVk40: 'สายการ์ด รางวัลหลัก 40K สปิน ต้นฉบับมีแต่รางวัล ไม่มีเป้าหมายเหรียญ',
     noteVk60: 'แบบพิเศษตรงกลาง รางวัลหลัก 60K สปินพร้อมหีบ',
     noteVk20: 'สายโทเคน: 20K สปิน โทเคน และอัญมณี 1K แต่เป้าหมายเหรียญสูงที่สุด',
-    pathHintGift: 'แตะกล่องของขวัญเพื่อเปิดบาร์นั้น'
+    pathHintGift: 'แตะกล่องของขวัญเพื่อเปิดบาร์นั้น',
+    bet5: 'เดิมพันขั้นที่ 5',
+    seqMore: 'ลำดับที่ 1: เหรียญเยอะ',
+    seqLess: 'ลำดับที่ 2: เหรียญน้อย',
+    i_newCard: 'การ์ดใหม่',
+    pathHintCrate: 'แตะกล่องป่าเพื่อเปิดบาร์นั้น',
+    noteTribal: 'ไวกิ้งชนเผ่าทุกวันพุธ เปิดตั้งแต่หมู่บ้าน 50 มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ'
   },
   vi: {
     siteTitle: 'Hướng dẫn nhiệm vụ Viking', tagline: 'Nhịp cược, mục tiêu xu và phần thưởng của từng thanh, gói gọn trong một trang.',
@@ -283,7 +313,13 @@ window.I18N = {
     noteVk40: 'Nhánh thẻ, giải chính 40K lượt quay. Nguồn chỉ ghi phần thưởng, không có mục tiêu xu.',
     noteVk60: 'Bản đặc biệt ở giữa: giải chính 60K lượt quay kèm rương.',
     noteVk20: 'Nhánh token: 20K lượt quay, token và 1K đá quý, nhưng mục tiêu xu cao nhất.',
-    pathHintGift: 'Chạm vào hộp quà để mở thanh đó.'
+    pathHintGift: 'Chạm vào hộp quà để mở thanh đó.',
+    bet5: 'Mức cược thứ 5',
+    seqMore: 'Trình tự 1: nhiều xu',
+    seqLess: 'Trình tự 2: ít xu',
+    i_newCard: 'Thẻ mới',
+    pathHintCrate: 'Chạm vào thùng rừng để mở thanh đó.',
+    noteTribal: 'Viking Bộ lạc mỗi thứ Tư, mở từ làng 50. Có hai trình tự cược tùy số xu.'
   },
   id: {
     siteTitle: 'Panduan Quest Viking', tagline: 'Pola taruhan, target koin, dan hadiah tiap bar dalam satu halaman.',
@@ -329,7 +365,13 @@ window.I18N = {
     noteVk40: 'Jalur kartu, hadiah utama 40K putaran. Sumber hanya mencantumkan hadiah, tanpa target koin.',
     noteVk60: 'Edisi spesial tengah: hadiah utama 60K putaran plus peti.',
     noteVk20: 'Jalur token: 20K putaran, token, dan 1K permata, tapi target koinnya paling tinggi.',
-    pathHintGift: 'Ketuk kotak hadiah untuk membuka bar itu.'
+    pathHintGift: 'Ketuk kotak hadiah untuk membuka bar itu.',
+    bet5: 'Taruhan ke-5',
+    seqMore: 'Urutan 1: koin banyak',
+    seqLess: 'Urutan 2: koin sedikit',
+    i_newCard: 'Kartu baru',
+    pathHintCrate: 'Ketuk peti hutan untuk membuka bar itu.',
+    noteTribal: 'Viking Suku setiap Rabu, mulai desa 50. Ada dua urutan taruhan sesuai jumlah koin.'
   },
   es: {
     siteTitle: 'Guía de misiones vikingas', tagline: 'Ritmo de apuestas, meta de monedas y premios de cada barra, en una sola página.',
@@ -375,7 +417,13 @@ window.I18N = {
     noteVk40: 'Ruta de cartas, premio principal de 40K tiradas. La fuente solo indica premios, no metas de monedas.',
     noteVk60: 'La especial del medio: 60K tiradas y cofres como premio principal.',
     noteVk20: 'Ruta de fichas: 20K tiradas, fichas y 1K gemas, pero con las metas de monedas más altas.',
-    pathHintGift: 'Toca una caja de regalo para abrir esa barra.'
+    pathHintGift: 'Toca una caja de regalo para abrir esa barra.',
+    bet5: '5.ª apuesta',
+    seqMore: 'Secuencia 1: más monedas',
+    seqLess: 'Secuencia 2: menos monedas',
+    i_newCard: 'Carta nueva',
+    pathHintCrate: 'Toca una caja de la selva para abrir esa barra.',
+    noteTribal: 'La vikinga tribal de los miércoles, desde la aldea 50. Dos secuencias según tus monedas.'
   },
   pt: {
     siteTitle: 'Guia das missões vikings', tagline: 'Ritmo de apostas, meta de moedas e prêmios de cada barra, em uma página só.',
@@ -421,6 +469,12 @@ window.I18N = {
     noteVk40: 'Rota das cartas, prêmio principal de 40K giros. A fonte só traz os prêmios, sem metas de moedas.',
     noteVk60: 'A especial do meio: 60K giros e baús como prêmio principal.',
     noteVk20: 'Rota das fichas: 20K giros, fichas e 1K gemas, mas com as metas de moedas mais altas.',
-    pathHintGift: 'Toque numa caixa de presente para abrir essa barra.'
+    pathHintGift: 'Toque numa caixa de presente para abrir essa barra.',
+    bet5: '5ª aposta',
+    seqMore: 'Sequência 1: mais moedas',
+    seqLess: 'Sequência 2: menos moedas',
+    i_newCard: 'Carta nova',
+    pathHintCrate: 'Toque numa caixa da selva para abrir essa barra.',
+    noteTribal: 'A viking tribal de quarta-feira, a partir da aldeia 50. Duas sequências conforme suas moedas.'
   }
 };
