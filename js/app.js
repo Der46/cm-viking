@@ -95,10 +95,11 @@
       var h = '<ol class="ladder' + (r.steps.length > 3 ? ' ladder-long' : '') + '">';
       r.steps.forEach(function (s, i) {
         h += '<li class="rung' + (s[1] ? '' : ' rung-open') + '">';
-        if (i > 0) h += '<span class="raise">' + esc(t('ifNoBonus')) + '</span>';
         h += '<span class="rung-bet"><span class="pips" aria-hidden="true">' +
           new Array(s[0] + 1).join('<i></i>') + '</span>' + esc(t('bet' + s[0])) + '</span>' +
-          '<span class="rung-spins">' + esc(s[1] ? t('spinsN', { n: s[1] }) : t('untilBonus')) + '</span></li>';
+          '<span class="rung-spins">' + esc(s[1] ? t('spinsN', { n: s[1] }) : t('untilBonus')) + '</span>' +
+          (s[1] && i < r.steps.length - 1 ? '<span class="raise">' + esc(t('raiseAfter', { n: s[1] })) + '</span>' : '') +
+          '</li>';
       });
       h += '</ol><ul class="rule-notes">';
       if (r.cap) h += '<li class="note-cap">' + esc(t('capNote')) + '</li>';
@@ -264,6 +265,8 @@
   /* ---------- 網址 #quest/tier/bar ---------- */
   function readHash() {
     var p = location.hash.replace(/^#/, '').split('/');
+    var alias = { viking: 'event' };  // 舊連結 #viking 仍可用
+    if (alias[p[0]]) p[0] = alias[p[0]];
     if (p[0] && QUESTS.some(function (q) { return q.id === p[0]; })) state.quest = p[0];
     if (p[1]) state.tier = p[1];
     var n = parseInt(p[2], 10);

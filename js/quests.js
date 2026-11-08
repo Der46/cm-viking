@@ -103,7 +103,7 @@ window.VIKING_QUESTS = [
     ]
   },
   {
-    id: 'viking',
+    id: 'event',
     title: 'Event Viking Quest',
     theme: 'event',   // 淡黃色主題（特殊活動）
     node: 'gift',     // 關卡地圖用禮物盒

@@ -278,8 +278,9 @@ button { cursor: pointer; }
 }
 .rung-open { background: color-mix(in srgb, var(--potion) 35%, #fff); border-color: color-mix(in srgb, var(--potion) 70%, #000); }
 .raise {
-  display: block; margin: -2px 0 4px;
-  font-size: 12px; font-weight: 700; color: #7A2131; line-height: 1.35;
+  display: block; margin-top: 8px; padding-top: 7px;
+  border-top: 1px dashed rgba(122, 33, 49, .3);
+  font-size: 12.5px; font-weight: 700; color: #7A2131; line-height: 1.4;
 }
 .rung-bet { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 17px; }
 .rung-spins { color: var(--ink-soft); font-size: 15px; padding-left: 34px; }
