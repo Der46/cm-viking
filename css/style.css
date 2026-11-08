@@ -108,7 +108,6 @@ button { cursor: pointer; }
 }
 .quest-tab[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--ink); font-weight: 650; }
 .quest-tab:hover { border-color: var(--gold); }
-.quest-more { font-size: 13px; color: var(--muted); }
 
 .title-block { position: relative; }
 .quest-title {
@@ -284,7 +283,7 @@ button { cursor: pointer; }
 }
 .rung-bet { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 17px; }
 .rung-spins { color: var(--ink-soft); font-size: 15px; padding-left: 34px; }
-.pips { display: inline-flex; gap: 3px; width: 26px; flex: none; }
+.pips { display: inline-flex; gap: 3px; min-width: 26px; flex: none; }
 .pips i { width: 6px; height: 14px; border-radius: 2px; background: #8A5A12; }
 @media (min-width: 600px) {
   .col-strategy > .ladder:not(.ladder-long) { grid-auto-flow: column; grid-auto-columns: 1fr; gap: 16px; }

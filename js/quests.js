@@ -11,6 +11,7 @@
  *   { kind: 'auto' }                        最低注自動轉
  *   { kind: 'auto', bet: 4 }                第四檔注自動轉（bet 1~4）
  *   { kind: 'free' }                        只用前兩檔注自由切換
+ *   { kind: 'range', from: 1, to: 3 }      在第 from～to 檔注之間輪流轉到出獎勵（圖源沒給次數時用）
  *   { kind: 'ladder', steps: [[檔位, 次數], ...], cap: true, loop: true, more: true }
  *        檔位 1~4（1=最低注）；次數 0 = 轉到出獎勵為止
  *        cap  = 顯示「不再往上加注」；loop = 顯示「依序輪流轉到出獎勵」
@@ -265,6 +266,89 @@ window.VIKING_QUESTS = [
           { goal: '10T', rewards: [{ t: 'coins', v: '150B' }, { t: 'spins', v: '10K' }, { t: 'regularChest' }] },
           { goal: '5.8T', wheel: true, rewards: [{ t: 'spins', v: '3.5K' }, { t: 'petxp', v: '900K' }] },
           { goal: '19.7T', rewards: [{ t: 'coins', v: '250B' }, { t: 'spins', v: '45K' }, { t: 'petxp', v: '2.3M' }, { t: 'regularChest' }, { t: 'newCard' }] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'sunday',
+    title: 'Sunday Viking Quest',
+    theme: 'tribal',  // 與週三維京相同的淡綠配色
+    node: 'gift',
+    name: {
+      'zh-TW': '週日維京',
+      en: 'Sunday Viking Quest',
+      ja: '日曜バイキング',
+      ko: '일요일 바이킹 퀘스트',
+      th: 'ภารกิจไวกิ้งวันอาทิตย์',
+      vi: 'Nhiệm vụ Viking Chủ nhật',
+      id: 'Quest Viking Minggu',
+      es: 'Misión vikinga del domingo',
+      pt: 'Missão viking de domingo'
+    },
+    colors: ['#E8823A', '#3FB5A8', '#C04FB8', '#7A5BD6', '#4AA35A',
+             '#9B4FD0', '#E05A4A', '#E2A93A', '#D9534F', '#4E8FD9'],
+    sequence: {
+      // 順序 1 = 金幣較多、順序 2 = 金幣較少
+      bars: {
+        1: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'auto', bet: 5 } },
+          { when: 'seqLess', rule: { kind: 'auto', bet: 4 } }
+        ] },
+        2: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'max', auto: true } },
+          { when: 'seqLess', rule: { kind: 'max', auto: true } }
+        ] },
+        3: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'auto', bet: 6 } },
+          { when: 'seqLess', rule: { kind: 'ladder', steps: [[2, 20], [3, 20], [4, 20], [5, 20], [6, 20]], loop: true } }
+        ] },
+        4: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'max', auto: true } },
+          { when: 'seqLess', rule: { kind: 'ladder', steps: [[1, 20], [2, 20], [3, 20]], more: true } }
+        ] },
+        5: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'ladder', steps: [[2, 20], [3, 20], [4, 20]], loop: true } },
+          { when: 'seqLess', rule: { kind: 'range', from: 1, to: 3 } }
+        ] },
+        6: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'ladder', steps: [[1, 25], [2, 25], [3, 25]], more: true } },
+          { when: 'seqLess', rule: { kind: 'range', from: 1, to: 3 } }
+        ] },
+        7: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'ladder', steps: [[2, 20], [3, 20], [4, 20]], loop: true } },
+          { when: 'seqLess', rule: { kind: 'ladder', steps: [[1, 25], [2, 25], [3, 25]], loop: true } }
+        ] },
+        8: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'auto', bet: 2 } },
+          { when: 'seqLess', rule: { kind: 'auto' } }
+        ] },
+        9: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'auto', bet: 3 } },
+          { when: 'seqLess', rule: { kind: 'auto' } }
+        ] },
+        10: { kind: 'choice', options: [
+          { when: 'seqMore', rule: { kind: 'ladder', steps: [[1, 20], [2, 20], [3, 20]], loop: true } },
+          { when: 'seqLess', rule: { kind: 'ladder', steps: [[1, 25], [2, 25]], loop: true } }
+        ] }
+      }
+    },
+    tiers: [
+      { id: '13k', prize: '13K', bars: null },
+      { id: '23k', prize: '23K', cards: 1, bars: null },
+      {
+        id: '60k', prize: '60K', cards: 2, note: 'noteSunday', default: true,
+        bars: [
+          { goal: '1.9T', rewards: [{ t: 'coins', v: '55B' }, { t: 'spins', v: '2K' }, { t: 'petxp', v: '280K' }, { t: 'setBlast', m: 30 }] },
+          { goal: '675B', rewards: [{ t: 'coins', v: '15B' }, { t: 'petxp', v: '225K' }, { t: 'magicalChest' }] },
+          { goal: '3.4T', rewards: [{ t: 'coins', v: '65B' }, { t: 'spins', v: '2K' }, { t: 'regularChest' }, { t: 'blueChest' }] },
+          { goal: '655B', wheel: true, rewards: [{ t: 'coins', v: '35B' }, { t: 'smallSeasonal' }, { t: 'petxp', v: '275K' }] },
+          { goal: '3.8T', rewards: [{ t: 'coins', v: '85B' }, { t: 'spins', v: '4.6K' }, { t: 'pinata' }] },
+          { goal: '4.5T', wheel: true, rewards: [{ t: 'spins', v: '11.5K' }, { t: 'pinata' }, { t: 'petxp', v: '800K' }] },
+          { goal: '6.4T', rewards: [{ t: 'coins', v: '200B' }, { t: 'petxp', v: '500K' }, { t: 'goldCard' }] },
+          { goal: '11.6T', rewards: [{ t: 'spins', v: '18.5K' }, { t: 'bigSeasonal' }, { t: 'goldenHammers', m: 10 }, { t: 'regularChest' }] },
+          { goal: '6.8T', wheel: true, rewards: [{ t: 'spins', v: '5K' }, { t: 'coinCraze', p: '200%' }, { t: 'petxp', v: '1.7M' }, { t: 'goldCard' }] },
+          { goal: '24.6T', rewards: [{ t: 'spins', v: '60K' }, { t: 'diamondSeasonal' }, { t: 'blueChest' }, { t: 'newCard' }, { t: 'regularChest' }] }
         ]
       }
     ]

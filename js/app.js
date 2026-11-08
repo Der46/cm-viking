@@ -86,6 +86,10 @@
     if (r.kind === 'auto') {
       return '<p class="rule-line">' + esc(r.bet && r.bet > 1 ? t('autoBetN', { b: t('bet' + r.bet) }) : t('autoLowest')) + '</p>';
     }
+    if (r.kind === 'range') {
+      return '<p class="rule-line">' + esc(t('rangeBets', { a: t('bet' + r.from), b: t('bet' + r.to) })) + '</p>' +
+        '<ul class="rule-notes"><li>' + esc(t('restartNote')) + '</li></ul>';
+    }
     if (r.kind === 'free') return '<p class="rule-line">' + esc(t('freeSwitch')) + '</p>';
     if (r.kind === 'ladder') {
       var h = '<ol class="ladder' + (r.steps.length > 3 ? ' ladder-long' : '') + '">';
@@ -136,7 +140,6 @@
       return '<button type="button" class="quest-tab" data-quest="' + q.id + '" aria-pressed="' + on + '">' +
         esc(q.name[state.lang] || q.title) + '</button>';
     }).join('');
-    h += '<span class="quest-more">' + esc(t('more')) + '</span>';
     $('quest-tabs').innerHTML = h;
   }
 
@@ -160,7 +163,7 @@
         '<input type="radio" name="tier" value="' + x.id + '"' + (on ? ' checked' : '') + '>' +
         (x.popular ? '<span class="tier-pop">' + esc(t('mostPopular')) + '</span>' : '') +
         '<span class="tier-prize">' + icon('spins') + x.prize + '</span>' +
-        '<span class="tier-name">' + esc(t(x.label)) + '</span>' +
+        (x.label ? '<span class="tier-name">' + esc(t(x.label)) + '</span>' : '') +
         (x.cards ? '<span class="tier-cards">' + esc(t('goldenCards', { n: x.cards })) + '</span>' : '') +
         '</label>';
     }).join('');

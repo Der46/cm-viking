@@ -28,7 +28,7 @@ window.I18N = {
     total: '總共需贏得金幣', wheelTag: '獎勵轉盤',
     noData: '這個主獎的各關目標金幣與獎勵還沒整理；下注方式各主獎通用，可直接參考。',
     note55: '成本與獎勵最接近常規的大型維京任務。', note65: '最大的維京任務，主獎 65K 次旋轉。',
-    more: '其他維京任務陸續補上。', skip: '跳到關卡詳情',
+    skip: '跳到關卡詳情',
     disclaimer: '玩家自製攻略，與 Moon Active 無關。數據來自社群回報，實際以遊戲內為準。',
     source: '數據來源：Coin Master Corner 社群',
     i_spins: '{v} 次旋轉', i_coins: '{v} 金幣', i_petxp: '{v} 寵物經驗', i_setBlast: '卡組爆發',
@@ -59,7 +59,10 @@ window.I18N = {
     seqLess: '順序 2：金幣較少',
     i_newCard: '新卡片',
     pathHintCrate: '點選叢林箱查看該關',
-    noteTribal: '每週三的部落維京，第 50 村起開放。依金幣存量有兩種下注順序。'
+    noteTribal: '每週三的部落維京，第 50 村起開放。依金幣存量有兩種下注順序。',
+    bet6: '第六檔注',
+    rangeBets: '{a}到{b}之間輪流轉，直到出獎勵。',
+    noteSunday: '週日維京。目前只有 60K 主獎有資料，依金幣存量有兩種下注順序。'
   },
   en: {
     siteTitle: 'Viking Quest Guide', tagline: 'Betting rhythm, coin goals and rewards for every bar, on one page.',
@@ -80,7 +83,7 @@ window.I18N = {
     total: 'Total coins to win', wheelTag: 'Bonus wheel',
     noData: 'Goals and rewards for this prize aren’t in yet. The betting steps are the same for every prize, so you can still follow them.',
     note55: 'Closest to the regular big Viking quest in both cost and prizes.', note65: 'The biggest Viking: 65K spins main prize.',
-    more: 'More Viking quests are on the way.', skip: 'Skip to bar details',
+    skip: 'Skip to bar details',
     disclaimer: 'Fan-made guide, not affiliated with Moon Active. Figures come from community reports; in-game values may differ.',
     source: 'Data: Coin Master Corner community',
     i_spins: '{v} spins', i_coins: '{v} coins', i_petxp: '{v} pet XP', i_setBlast: 'Set Blast',
@@ -111,7 +114,10 @@ window.I18N = {
     seqLess: 'Sequence 2: fewer coins',
     i_newCard: 'New card',
     pathHintCrate: 'Tap a jungle crate to open that bar.',
-    noteTribal: 'The Wednesday Tribal Viking, open from village 50. Two betting sequences depending on your coins.'
+    noteTribal: 'The Wednesday Tribal Viking, open from village 50. Two betting sequences depending on your coins.',
+    bet6: '6th bet',
+    rangeBets: 'Rotate between {a} and {b} until the bonus lands.',
+    noteSunday: 'The Sunday Viking. Only the 60K prize has data so far; two betting sequences depending on your coins.'
   },
   ja: {
     siteTitle: 'バイキングクエスト攻略', tagline: '各バーのベット手順・目標コイン・報酬を1ページで。',
@@ -132,7 +138,7 @@ window.I18N = {
     total: '合計獲得コイン', wheelTag: 'ボーナスホイール',
     noData: 'このメイン報酬の目標と報酬はまだありません。ベット手順はどのメイン報酬でも共通なので、そのまま使えます。',
     note55: 'コストも報酬も通常の大型バイキングに一番近い。', note65: '最大のバイキング。メイン報酬は 65K スピン。',
-    more: '他のバイキングクエストも順次追加予定。', skip: 'バー詳細へ移動',
+    skip: 'バー詳細へ移動',
     disclaimer: 'ファン制作の攻略で、Moon Active とは無関係です。数値はコミュニティ報告によるもので、ゲーム内と異なる場合があります。',
     source: 'データ：Coin Master Corner コミュニティ',
     i_spins: '{v} スピン', i_coins: '{v} コイン', i_petxp: 'ペット経験値 {v}', i_setBlast: 'セットブラスト',
@@ -163,7 +169,10 @@ window.I18N = {
     seqLess: '手順 2：コインが少ない時',
     i_newCard: '新カード',
     pathHintCrate: 'ジャングルの箱をタップしてバーを表示',
-    noteTribal: '毎週水曜のトライバル・バイキング。村 50 から参加可。コイン量に応じて 2 つの手順があります。'
+    noteTribal: '毎週水曜のトライバル・バイキング。村 50 から参加可。コイン量に応じて 2 つの手順があります。',
+    bet6: '6段目のベット',
+    rangeBets: '{a}から{b}の間で回し、ボーナスが出るまで続ける。',
+    noteSunday: '日曜のバイキング。現在データがあるのは 60K のみ。コイン量に応じて 2 つの手順があります。'
   },
   ko: {
     siteTitle: '바이킹 퀘스트 공략', tagline: '바별 베팅 순서, 목표 코인, 보상을 한 페이지에.',
@@ -184,7 +193,7 @@ window.I18N = {
     total: '총 획득 코인', wheelTag: '보너스 휠',
     noData: '이 메인 보상의 목표와 보상 정보는 아직 없습니다. 베팅 방법은 모든 메인 보상에 공통이니 그대로 참고하세요.',
     note55: '비용과 보상 모두 일반 대형 바이킹에 가장 가깝습니다.', note65: '가장 큰 바이킹. 메인 보상 65K 스핀.',
-    more: '다른 바이킹 퀘스트도 곧 추가됩니다.', skip: '바 상세로 이동',
+    skip: '바 상세로 이동',
     disclaimer: '팬이 만든 공략으로 Moon Active와 관련이 없습니다. 수치는 커뮤니티 제보 기준이며 게임 내 값과 다를 수 있습니다.',
     source: '데이터: Coin Master Corner 커뮤니티',
     i_spins: '스핀 {v}', i_coins: '코인 {v}', i_petxp: '펫 경험치 {v}', i_setBlast: '세트 블라스트',
@@ -215,7 +224,10 @@ window.I18N = {
     seqLess: '순서 2: 코인이 적을 때',
     i_newCard: '새 카드',
     pathHintCrate: '정글 상자를 눌러 해당 바를 확인하세요.',
-    noteTribal: '매주 수요일 부족 바이킹, 50번 마을부터 참여 가능. 코인 양에 따라 두 가지 베팅 순서가 있습니다.'
+    noteTribal: '매주 수요일 부족 바이킹, 50번 마을부터 참여 가능. 코인 양에 따라 두 가지 베팅 순서가 있습니다.',
+    bet6: '여섯 번째 베팅',
+    rangeBets: '{a}부터 {b}까지 번갈아 돌리며 보너스가 나올 때까지 진행.',
+    noteSunday: '일요일 바이킹. 현재 60K 보상만 정보가 있으며, 코인 양에 따라 두 가지 베팅 순서가 있습니다.'
   },
   th: {
     siteTitle: 'คู่มือภารกิจไวกิ้ง', tagline: 'จังหวะการเดิมพัน เป้าหมายเหรียญ และรางวัลของทุกบาร์ ในหน้าเดียว',
@@ -236,7 +248,7 @@ window.I18N = {
     total: 'เหรียญที่ต้องชนะทั้งหมด', wheelTag: 'วงล้อโบนัส',
     noData: 'ยังไม่มีข้อมูลเป้าหมายและรางวัลของรางวัลหลักนี้ วิธีเดิมพันใช้เหมือนกันทุกรางวัลหลัก ดูตามได้เลย',
     note55: 'ใกล้เคียงไวกิ้งใหญ่ปกติที่สุด ทั้งต้นทุนและรางวัล', note65: 'ไวกิ้งที่ใหญ่ที่สุด รางวัลหลัก 65K สปิน',
-    more: 'ภารกิจไวกิ้งอื่นๆ จะตามมาเร็วๆ นี้', skip: 'ข้ามไปที่รายละเอียดบาร์',
+    skip: 'ข้ามไปที่รายละเอียดบาร์',
     disclaimer: 'คู่มือที่แฟนเกมทำขึ้น ไม่เกี่ยวข้องกับ Moon Active ตัวเลขมาจากรายงานของชุมชน ค่าจริงในเกมอาจต่างไป',
     source: 'ข้อมูล: ชุมชน Coin Master Corner',
     i_spins: '{v} สปิน', i_coins: '{v} เหรียญ', i_petxp: 'EXP สัตว์เลี้ยง {v}', i_setBlast: 'เซ็ตบลาสต์',
@@ -267,7 +279,10 @@ window.I18N = {
     seqLess: 'ลำดับที่ 2: เหรียญน้อย',
     i_newCard: 'การ์ดใหม่',
     pathHintCrate: 'แตะกล่องป่าเพื่อเปิดบาร์นั้น',
-    noteTribal: 'ไวกิ้งชนเผ่าทุกวันพุธ เปิดตั้งแต่หมู่บ้าน 50 มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ'
+    noteTribal: 'ไวกิ้งชนเผ่าทุกวันพุธ เปิดตั้งแต่หมู่บ้าน 50 มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ',
+    bet6: 'เดิมพันขั้นที่ 6',
+    rangeBets: 'สลับระหว่าง{a}ถึง{b}จนกว่าโบนัสจะออก',
+    noteSunday: 'ไวกิ้งวันอาทิตย์ ตอนนี้มีข้อมูลเฉพาะรางวัล 60K มีลำดับเดิมพันสองแบบตามจำนวนเหรียญ'
   },
   vi: {
     siteTitle: 'Hướng dẫn nhiệm vụ Viking', tagline: 'Nhịp cược, mục tiêu xu và phần thưởng của từng thanh, gói gọn trong một trang.',
@@ -288,7 +303,7 @@ window.I18N = {
     total: 'Tổng xu cần thắng', wheelTag: 'Vòng quay thưởng',
     noData: 'Chưa có mục tiêu và phần thưởng cho giải chính này. Cách đặt cược giống nhau ở mọi giải chính, bạn vẫn làm theo được.',
     note55: 'Gần với Viking lớn thường lệ nhất về cả chi phí lẫn phần thưởng.', note65: 'Viking lớn nhất, giải chính 65K lượt quay.',
-    more: 'Các nhiệm vụ Viking khác sẽ sớm được bổ sung.', skip: 'Đến chi tiết thanh',
+    skip: 'Đến chi tiết thanh',
     disclaimer: 'Hướng dẫn do người chơi tự làm, không liên quan đến Moon Active. Số liệu lấy từ cộng đồng, giá trị trong game có thể khác.',
     source: 'Dữ liệu: cộng đồng Coin Master Corner',
     i_spins: '{v} lượt quay', i_coins: '{v} xu', i_petxp: '{v} EXP thú cưng', i_setBlast: 'Set Blast',
@@ -319,7 +334,10 @@ window.I18N = {
     seqLess: 'Trình tự 2: ít xu',
     i_newCard: 'Thẻ mới',
     pathHintCrate: 'Chạm vào thùng rừng để mở thanh đó.',
-    noteTribal: 'Viking Bộ lạc mỗi thứ Tư, mở từ làng 50. Có hai trình tự cược tùy số xu.'
+    noteTribal: 'Viking Bộ lạc mỗi thứ Tư, mở từ làng 50. Có hai trình tự cược tùy số xu.',
+    bet6: 'Mức cược thứ 6',
+    rangeBets: 'Xoay vòng từ {a} đến {b} đến khi ra thưởng.',
+    noteSunday: 'Viking Chủ nhật. Hiện chỉ có dữ liệu giải 60K; có hai trình tự cược tùy số xu.'
   },
   id: {
     siteTitle: 'Panduan Quest Viking', tagline: 'Pola taruhan, target koin, dan hadiah tiap bar dalam satu halaman.',
@@ -340,7 +358,7 @@ window.I18N = {
     total: 'Total koin yang harus dimenangkan', wheelTag: 'Roda bonus',
     noData: 'Target dan hadiah untuk hadiah utama ini belum ada. Cara bertaruh sama untuk semua hadiah utama, jadi tetap bisa diikuti.',
     note55: 'Paling mirip Viking besar reguler, dari sisi biaya maupun hadiah.', note65: 'Viking terbesar, hadiah utama 65K putaran.',
-    more: 'Quest Viking lainnya segera menyusul.', skip: 'Langsung ke detail bar',
+    skip: 'Langsung ke detail bar',
     disclaimer: 'Panduan buatan penggemar, tidak berafiliasi dengan Moon Active. Angka dari laporan komunitas; nilai di game bisa berbeda.',
     source: 'Data: komunitas Coin Master Corner',
     i_spins: '{v} putaran', i_coins: '{v} koin', i_petxp: '{v} EXP pet', i_setBlast: 'Set Blast',
@@ -371,7 +389,10 @@ window.I18N = {
     seqLess: 'Urutan 2: koin sedikit',
     i_newCard: 'Kartu baru',
     pathHintCrate: 'Ketuk peti hutan untuk membuka bar itu.',
-    noteTribal: 'Viking Suku setiap Rabu, mulai desa 50. Ada dua urutan taruhan sesuai jumlah koin.'
+    noteTribal: 'Viking Suku setiap Rabu, mulai desa 50. Ada dua urutan taruhan sesuai jumlah koin.',
+    bet6: 'Taruhan ke-6',
+    rangeBets: 'Gilir antara {a} sampai {b} hingga bonus keluar.',
+    noteSunday: 'Viking Minggu. Baru hadiah 60K yang ada datanya; ada dua urutan taruhan sesuai jumlah koin.'
   },
   es: {
     siteTitle: 'Guía de misiones vikingas', tagline: 'Ritmo de apuestas, meta de monedas y premios de cada barra, en una sola página.',
@@ -392,7 +413,7 @@ window.I18N = {
     total: 'Monedas totales a ganar', wheelTag: 'Rueda de bonus',
     noData: 'Aún no hay metas ni premios para este premio principal. La forma de apostar es la misma para todos, así que puedes seguirla igual.',
     note55: 'El más parecido al vikingo grande habitual en coste y premios.', note65: 'El vikingo más grande: premio principal de 65K tiradas.',
-    more: 'Pronto añadiremos más misiones vikingas.', skip: 'Ir al detalle de la barra',
+    skip: 'Ir al detalle de la barra',
     disclaimer: 'Guía hecha por fans, sin relación con Moon Active. Cifras de la comunidad; los valores en el juego pueden variar.',
     source: 'Datos: comunidad Coin Master Corner',
     i_spins: '{v} tiradas', i_coins: '{v} monedas', i_petxp: '{v} XP de mascota', i_setBlast: 'Set Blast',
@@ -423,7 +444,10 @@ window.I18N = {
     seqLess: 'Secuencia 2: menos monedas',
     i_newCard: 'Carta nueva',
     pathHintCrate: 'Toca una caja de la selva para abrir esa barra.',
-    noteTribal: 'La vikinga tribal de los miércoles, desde la aldea 50. Dos secuencias según tus monedas.'
+    noteTribal: 'La vikinga tribal de los miércoles, desde la aldea 50. Dos secuencias según tus monedas.',
+    bet6: '6.ª apuesta',
+    rangeBets: 'Alterna entre {a} y {b} hasta que salga el bonus.',
+    noteSunday: 'La vikinga del domingo. Por ahora solo hay datos del premio de 60K; dos secuencias según tus monedas.'
   },
   pt: {
     siteTitle: 'Guia das missões vikings', tagline: 'Ritmo de apostas, meta de moedas e prêmios de cada barra, em uma página só.',
@@ -444,7 +468,7 @@ window.I18N = {
     total: 'Total de moedas a ganhar', wheelTag: 'Roda de bônus',
     noData: 'Metas e prêmios das barras deste prêmio principal ainda não foram levantados. O jeito de apostar é o mesmo para todos os prêmios.',
     note55: 'O mais parecido com o viking grande normal em custo e prêmios.', note65: 'O maior viking: prêmio principal de 65K giros.',
-    more: 'Mais missões vikings em breve.', skip: 'Ir para os detalhes da barra',
+    skip: 'Ir para os detalhes da barra',
     disclaimer: 'Guia feito por fãs, sem ligação com a Moon Active. Números da comunidade; os valores no jogo podem variar.',
     source: 'Dados: comunidade Coin Master Corner',
     i_spins: '{v} giros', i_coins: '{v} moedas', i_petxp: '{v} XP de pet', i_setBlast: 'Set Blast',
@@ -475,6 +499,9 @@ window.I18N = {
     seqLess: 'Sequência 2: menos moedas',
     i_newCard: 'Carta nova',
     pathHintCrate: 'Toque numa caixa da selva para abrir essa barra.',
-    noteTribal: 'A viking tribal de quarta-feira, a partir da aldeia 50. Duas sequências conforme suas moedas.'
+    noteTribal: 'A viking tribal de quarta-feira, a partir da aldeia 50. Duas sequências conforme suas moedas.',
+    bet6: '6ª aposta',
+    rangeBets: 'Alterne entre {a} e {b} até sair o bônus.',
+    noteSunday: 'A viking de domingo. Por enquanto só há dados do prêmio de 60K; duas sequências conforme suas moedas.'
   }
 };
