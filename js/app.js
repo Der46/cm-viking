@@ -94,17 +94,16 @@
     if (r.kind === 'ladder') {
       var h = '<ol class="ladder' + (r.steps.length > 3 ? ' ladder-long' : '') + '">';
       r.steps.forEach(function (s, i) {
-        h += '<li class="rung' + (s[1] ? '' : ' rung-open') + '">';
+        var last = i === r.steps.length - 1;  // 最後一檔一律轉到出獎勵轉盤為止
+        h += '<li class="rung' + (last ? ' rung-open' : '') + '">';
         h += '<span class="rung-bet"><span class="pips" aria-hidden="true">' +
           new Array(s[0] + 1).join('<i></i>') + '</span>' + esc(t('bet' + s[0])) + '</span>' +
-          '<span class="rung-spins">' + esc(s[1] ? t('spinsN', { n: s[1] }) : t('untilBonus')) + '</span>' +
-          (s[1] && i < r.steps.length - 1 ? '<span class="raise">' + esc(t('raiseAfter', { n: s[1] })) + '</span>' : '') +
+          '<span class="rung-spins">' + esc(last ? t('untilBonus') : t('spinsN', { n: s[1] })) + '</span>' +
+          (!last ? '<span class="raise">' + esc(t('raiseAfter', { n: s[1] })) + '</span>' : '') +
           '</li>';
       });
       h += '</ol><ul class="rule-notes">';
       if (r.cap) h += '<li class="note-cap">' + esc(t('capNote')) + '</li>';
-      if (r.more) h += '<li>' + esc(t('moreNote', { n: r.steps[0][1] })) + '</li>';
-      if (r.loop) h += '<li>' + esc(t('loopNote')) + '</li>';
       h += '<li>' + esc(t('restartNote')) + '</li></ul>';
       return h;
     }

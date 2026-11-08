@@ -13,9 +13,9 @@
  *   { kind: 'free' }                        只用前兩檔注自由切換
  *   { kind: 'range', from: 1, to: 3 }      在第 from～to 檔注之間輪流轉到出獎勵（圖源沒給次數時用）
  *   { kind: 'ladder', steps: [[檔位, 次數], ...], cap: true, loop: true, more: true }
- *        檔位 1~4（1=最低注）；次數 0 = 轉到出獎勵為止
- *        cap  = 顯示「不再往上加注」；loop = 顯示「依序輪流轉到出獎勵」
- *        more = 顯示「還沒出就每 N 次再加一檔」（N 取第一步的次數）
+ *        檔位 1~6（1=最低注）；每一檔轉「次數」後沒出獎勵轉盤就加一檔
+ *        最後一檔不論次數，一律顯示「轉到出獎勵轉盤為止」
+ *        cap = 顯示「不再往上加注」（loop / more 為舊欄位，已不顯示）
  *   { kind: 'choice', options: [{ when: 'lowCoins' | 'highCoins', rule: {...} }] }
  *
  * tiers[] 主獎：id、prize（顯示用）、label（tierCards / medium …）、cards（金卡數）、
