@@ -35,7 +35,7 @@ window.VIKING_QUESTS = [
     title: 'Enchanted Viking Quest',
     theme: 'enchanted', // 淺紫色主題
     name: {
-      'zh-TW': '魔法維京任務',
+      'zh-TW': '魔法維京',
       en: 'Enchanted Viking Quest',
       ja: 'エンチャンテッド・バイキングクエスト',
       ko: '인챈티드 바이킹 퀘스트',
@@ -108,7 +108,7 @@ window.VIKING_QUESTS = [
     theme: 'event',   // 淡黃色主題（特殊活動）
     node: 'gift',     // 關卡地圖用禮物盒
     name: {
-      'zh-TW': '活動維京任務',
+      'zh-TW': '活動維京',
       en: 'Event Viking Quest',
       ja: 'イベント・バイキングクエスト',
       ko: '이벤트 바이킹 퀘스트',

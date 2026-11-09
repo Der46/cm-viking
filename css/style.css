@@ -220,7 +220,7 @@ button { cursor: pointer; }
   box-shadow: 0 0 0 2px var(--plum);
 }
 
-/* 頁面載入時唯一的編排動畫：路徑描出 + 藥水依序亮起 */
+/* 載入與切換維京時的編排動畫：路徑描出 + 關卡依序亮起 */
 @media (prefers-reduced-motion: no-preference) {
   .ready .path-line path { animation: trail 1.4s var(--ease) both; }
   .ready .node { animation: pop .5s var(--ease) both; animation-delay: calc(.25s + var(--i) * .08s); }

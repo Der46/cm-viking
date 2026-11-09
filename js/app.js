@@ -19,7 +19,7 @@
     set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) { /* 無痕模式等情況 */ } }
   };
 
-  var introDone = false;
+  var shownQuest = null;  // 上次畫過關卡地圖的維京；換維京時重播進場動畫
   var state = { lang: pickLang(), quest: QUESTS[0].id, tier: null, bar: 1 };
 
   function pickLang() {
@@ -175,13 +175,16 @@
   function renderPath() {
     var q = quest(), cur = tier();
     var wrap = $('path');
+    var intro = shownQuest !== q.id;
+    shownQuest = q.id;
     wrap.querySelectorAll('.node').forEach(function (n) { n.remove(); });
+    if (intro) replayTrail(wrap);
     NODES.forEach(function (p, i) {
       var n = i + 1;
       var b = document.createElement('button');
       b.type = 'button';
       b.className = 'node' + (n === state.bar ? ' is-on' : '') +
-        (cur.bars && cur.bars[i].wheel ? ' is-wheel' : '') + (introDone ? ' no-anim' : '');
+        (cur.bars && cur.bars[i].wheel ? ' is-wheel' : '') + (intro ? '' : ' no-anim');
       b.style.left = (p[0] / 500 * 100) + '%';
       b.style.top = (p[1] / 310 * 100) + '%';
       b.style.setProperty('--potion', q.colors[i]);
@@ -250,6 +253,15 @@
     wrap.innerHTML = '<table><thead><tr><th scope="col">' + esc(t('colBar')) + '</th><th scope="col">' + esc(t('colGoal')) +
       '</th><th scope="col">' + esc(t('colRewards')) + '</th></tr></thead><tbody>' + rows + '</tbody></table>';
     $('total').innerHTML = allGoals ? esc(t('total')) + ' <strong>' + fmtAmount(sum) + '</strong>' : '';
+  }
+
+  // 重新觸發路徑描線動畫（切換維京時）
+  function replayTrail(wrap) {
+    wrap.querySelectorAll('.path-line path').forEach(function (el) {
+      el.style.animation = 'none';
+      void el.getBoundingClientRect();
+      el.style.animation = '';
+    });
   }
 
   function render() {
@@ -324,5 +336,4 @@
   render();
   writeHash();
   document.body.classList.add('ready');
-  introDone = true;
 })();
